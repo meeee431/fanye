@@ -1,0 +1,13 @@
+mdDss = 0, 0, 638, 359, C
+mdErrorLib = 0, 0, 0, 0, C
+mdSystem = 0, 0, 0, 0, C
+mdStation = 0, 0, 0, 0, C
+mdMiddleLib = 0, 0, 0, 0, C
+TicketBusDim = 0, 0, 713, 367, C
+TicketCompanyDim = 0, 0, 619, 430, C
+TicketRouteDim = 66, 87, 679, 451, C
+TicketStationDim = 110, 145, 729, 575, C
+TicketSellerDim = 44, 58, 657, 417, Z
+TicketUnitDim = 154, 203, 773, 633, C
+mdCommonLib = 0, 0, 0, 0, C
+TicketVehicleDim = 0, 0, 0, 0, C

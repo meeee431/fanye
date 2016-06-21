@@ -1,0 +1,62 @@
+Type=OleDll
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\system32\stdole2.tlb#OLE Automation
+Reference=*\G{00000200-0000-0010-8000-00AA006D2EA4}#2.0#0#C:\Program Files\Common Files\System\ado\msado20.tlb#Microsoft ActiveX Data Objects 2.0 Library
+Reference=*\G{EE887419-0123-40D6-9B39-ED1839847C02}#1.0#0#C:\Windows\system32\RTBaseLib.dll#RTsoft Application Base Service
+Reference=*\G{D82A763C-E967-464E-85A0-8079CC08F881}#1.0#0#C:\Windows\system32\RTCore.dll#RTsoft Core Service
+Module=mdMiddleLib; mdMiddleLib.bas
+Module=mdErrorLib; mdErrorHandling.bas
+Module=mdCommonLib; mdCommonLib.bas
+Module=mdAdvanceLib; mdAdvanceLib.bas
+Module=mdSystemBase; mdSystemBase.bas
+Module=mdMsgUp; mdMsgUp.bas
+Class=ActiveUser; ActiveUser.cls
+Class=ActiveUserData; ActiveUserData.cls
+Class=SystemAgent; SystemAgent.cls
+Class=TicketType; TicketType.cls
+Module=mdStation; mdStation.bas
+Module=mdSystem; mdSystem.bas
+Class=SystemParam; SystemParam.cls
+ResFile32="STSystemBase.RES"
+Startup="(None)"
+HelpFile=""
+ExeName32="STSystemBase.dll"
+Path32="..\目标文件"
+Command32=""
+Name="STSystemBase"
+HelpContextID="0"
+CompatibleMode="2"
+CompatibleEXE32="c:\wINdows\system32\STSystemBase.dll"
+VersionCompatible32="1"
+MajorVer=0
+MinorVer=0
+RevisionVer=9
+AutoIncrementVer=1
+ServerSupportFiles=0
+CondComp="ACTIVEUSER_USE_MEMORY = 0 : IN_DEBUG = 0 : SUPPORT_MSG = 0"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=1
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+ThreadingModel=1
+DebugStartupOption=0
+
+[RVB]
+DeleteClass1=mdCommonMid
+DeleteClass2=Unit
+DeleteClass3=mdCommonMid
+DeleteClass4=mdCommonMid
+DeleteClass5=ServerProxy
+
+[MS Transaction Server]
+AutoRefresh=1

@@ -1,0 +1,592 @@
+System=BillPrint
+Version=1.0
+
+Begin BillPrint
+PaperType=0
+PageSize=2400,635
+Space=-120,-150
+Orientation = 1
+BillSize=300,300
+Offset=0,0
+ScanMode = 1
+ForeColor=0|0|0
+BackColor=255|255|255
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblBeginStation"
+    ObjectIndex = 1
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=500,200,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 0
+    Caption = "起点站"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "黑体"
+    FontHeight = 8
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblEndStation"
+    ObjectIndex = 2
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=900,220,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "到站"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "黑体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblTicketPrice"
+    ObjectIndex = 4
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=330,220,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "票价"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblTickettype"
+    ObjectIndex = 3
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=430,150,50,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "票种"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblUserID"
+    ObjectIndex = 9
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1560,220,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "工号"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblStartupDate"
+    ObjectIndex = 10
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=20,395,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "乘车日期"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 6
+    FontWidth = 6
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblBusID"
+    ObjectIndex = 11
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=330,395,120,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "车次  "
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblSeatNumber"
+    ObjectIndex = 14
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=980,395,80,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "座号"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "黑体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblStartupTime"
+    ObjectIndex = 15
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1050,395,135,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "发车时间"
+    TextAlign = 2
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblVehicleType"
+    ObjectIndex = 16
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1180,395,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "车型"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 6 
+    FontWidth = 7
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblCheckGate"
+    ObjectIndex = 17
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1400,395,70,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "检票口"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "黑体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblShortTicketID"
+    ObjectIndex = 18
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1550,395,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "票号"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 6
+    FontWidth = 7
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblInsure"
+    ObjectIndex = 23
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1550,435,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "保险"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 6
+    FontWidth = 7
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblBeginStation2"
+    ObjectIndex = 5
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=70,220,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "起点站2"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 6
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblEndStation2"
+    ObjectIndex = 6
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=150,220,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "终点站"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblBusID2"
+    ObjectIndex = 13
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=860,395,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "车次2"
+    TextAlign = 3
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 6
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblTickettype2"
+    ObjectIndex = 8
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1330,220,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "票种2"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 6
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblSeatNumber2"
+    ObjectIndex = 21
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=420,460,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "座号2"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 6
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblTicketPrice2"
+    ObjectIndex = 7
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1100,210,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "票价_"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 9
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblStartupDate2"
+    ObjectIndex = 12
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=520,395,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "乘车日期_"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "黑体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblTicketID2"
+    ObjectIndex = 20
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=40,460,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "长票号"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 9
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblCompanyName"
+    ObjectIndex = 22
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=570,158,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "绍兴汽运"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 6
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblReturnMark"
+    ObjectIndex = 24
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=20,510,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 0
+    Caption = ".."
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 9
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "tickettype2"
+    ObjectIndex = 25
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=330,500,190,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "携带儿童与否"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 6
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+End BillPrint

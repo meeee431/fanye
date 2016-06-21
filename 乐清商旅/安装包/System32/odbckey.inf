@@ -1,0 +1,137 @@
+[Messages]
+	ComplianceTitle=无法安装这些驱动程序
+	ComplianceFail=必须具备下表所列的 Microsoft 产品之一才能安装这些驱动程序
+	ConfDsnFailed=ODBC %s 驱动程序配置失败
+	BadKeyLine=在 ODBC 驱动程序 %s 中丢失或含有错误的'%s'关键字
+	InstallDriverFail=ODBC 驱动程序 %s 的 SQLInstallDriver 失败
+	Title=配置 ODBC 驱动程序时出错!
+	Title2=无效的安装平台!
+	Title3=DataFactory 配置
+	Title4=权限不足
+	OutOfMem=配置 ODBC 驱动程序时内存不足
+	MissingDriver=在 %s 的 ODBC 驱动程序 %s 中丢失关键字'Driver='或'Setup=' 
+	BadDetectOsKey=在 odbcstf.dll 中出现未知的 AcmeDetectOS 标志 %s
+	InstallTranslatorFail=在配置 %s 转换器时 ODBC 的 SQLInstallTranslator 失败
+	RemoveTranslatorFail=在删除 %s 转换器时 ODBC 的 SQLRemoveTranslator 失败
+	InstallDmFailed=ODBC 的 SQLInstallDriverManager 失败
+	RemoveDmFailed=ODBC 的 SQLRemoveDriverManager 失败
+	ConfigDriverFailed=驱动程序 %s 的 ODBC SQLConfigDriver 失败
+	RemoveDriverFail=驱动程序 %s 的 ODBC SQLRemoveDriver 失败
+	UnableToRegister=无法登录程序库 %s%s: %s
+	NTVersion5=Microsost 数据访问组件无法安装在此版本的操作系统上。从 Windows 2000 开始 Microsoft Data Access Components 作为操作系统的一部分来发布。所有的升级都必须通过操作系统的 Service Packs 获得。请参阅 Microsoft Data Access 站点 http://www.microsoft.com/data 以获取更多的信息。
+	DFConfig=ADO 远端数据服务(RDS) 的一个限制版的 DataFactory 组件将被安装。在 Internet 客户通过 RDS 访问服务器上的数据源之前要先配置 DataFactory。假如要继续, 请按'是'按钮。假如你想要允许 Internet 客户通过 RDS 无限制地访问服务器上的数据源, 请按'否'按钮。请参阅 ADO 产品文档和自述文件以获取更多的信息。
+	NoAdmin=您没有足够的安装权限。
+
+[SQL Server]
+	Name=SQL Server
+	Driver=sqlsrv32.dll
+	Setup=sqlsrv32.dll
+	SQLLevel=1
+	FileUsage=0
+	DriverODBCVer=03.50
+	ConnectFunctions=YYY
+	APILevel=2
+	CPTimeout=60
+
+[Oracle]
+	Name=Microsoft ODBC for Oracle
+	Driver=msorcl32.dll
+	Setup=msorcl32.dll
+	SQLLevel=1
+	FileUsage=0
+	DriverODBCVer=02.50
+	ConnectFunctions=YYY
+	APILevel=2
+	CPTimeout=60
+
+
+[Translators]
+	Name=MS Code Page Translator
+	Translator=MSCPXL32.DLL
+	Setup=MSCPXL32.DLL	
+	
+[Text]
+	Driver=odbcjt32.dll
+	Setup=odtext32.dll
+	Name=Microsoft Text Driver (*.txt; *.csv)
+	APILevel=1
+	ConnectFunctions=YYN
+	DriverODBCVer=02.50
+	FileUsage=1
+	FileExtns=*.,*.asc,*.csv,*.tab,*.txt,*.csv
+	SQLLevel=0
+	ConfigDSN=DSN=Text Files|DriverID=27||
+
+[Excel]
+	Driver=odbcjt32.dll
+	Setup=odexl32.dll
+	Name=Microsoft Excel Driver (*.xls)
+	APILevel=1
+	ConnectFunctions=YYN
+	DriverODBCVer=02.50
+	FileUsage=1
+	FileExtns=*.xls
+	SQLLevel=0
+	ConfigDSN=DSN=Excel Files|DriverId=22||
+
+[dBase]
+	Driver=odbcjt32.dll
+	Setup=oddbse32.dll
+	Name=Microsoft dBase Driver (*.dbf)
+	APILevel=1
+	ConnectFunctions=YYN
+	DriverODBCVer=02.50
+	FileUsage=1
+	FileExtns=*.dbf,*.ndx,*.mdx
+	SQLLevel=0
+	ConfigDSN=DSN=dBASE Files|DriverId=533||		
+
+[Paradox]
+	Driver=odbcjt32.dll
+	Setup=odpdx32.dll
+	Name=Microsoft Paradox Driver (*.db )
+	APILevel=1
+	ConnectFunctions=YYN
+	DriverODBCVer=02.50
+	FileUsage=1
+	FileExtns=*.db
+	SQLLevel=0
+	ConfigDSN=DSN=Paradox Files|DriverId=538||
+
+[Access]
+	Driver=odbcjt32.dll
+	Setup=odbcjt32.dll
+	Name=Microsoft Access Driver (*.mdb)
+	APILevel=1
+	ConnectFunctions=YYN
+	DriverODBCVer=02.50
+	FileUsage=2
+	FileExtns=*.mdb
+	SQLLevel=0
+	ConfigDSN=DSN=MS Access '97 Database|UID=Admin||
+
+[FoxPro]
+	Driver=odbcjt32.dll
+	Setup=odfox32.dll
+	Name=Microsoft FoxPro Driver (*.dbf)
+	APILevel=1
+	ConnectFunctions=YYN
+	DriverODBCVer=02.50
+	FileUsage=1
+	FileExtns=*.dbf,*.cdx,*.idx,*.fpt
+	SQLLevel=0
+	ConfigDSN=DSN=FoxPro Files|DriverId=536||
+
+[VFP]
+	Driver=vfpodbc.dll
+	Setup=vfpodbc.dll
+	Name=Microsoft Visual FoxPro Driver
+	APILevel=0
+	ConnectFunctions=YYN
+	DriverODBCVer=02.50
+	FileUsage=1
+	FileExtns=*.dbf,*.cdx,*.idx,*.fpt
+	SQLLevel=0
+	ConfigDSN=DSN=FoxPro Files|DriverId=536||
+
+	

@@ -1,0 +1,419 @@
+System=BillPrint
+Version=1.0
+
+Begin BillPrint
+PaperType=0
+PageSize=2410,2805
+Space=0,0
+Orientation = 1
+BillSize=2410,2805
+Offset=-250,0
+ScanMode = 1
+ForeColor=0|0|0
+BackColor=255|255|255
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblLongSheetID"
+    ObjectIndex = 1
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=400,100,200,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "签发单号"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+	ObjectStyle=3
+	ObjectName="行包受理清单表格"
+	ObjectIndex=7
+	BorderLineStyle=1
+	BorderLineWidth=1
+	Size=300,320,1800,980
+	ForeColor=0|0|0
+	BackColor=255|255|255
+	Transparent=1
+	Visible=1
+	Row=4
+	Column=9
+	NoCellBorder = 0
+	SameHeight=105
+	SameWidth=100
+	RowSameHeight=0
+	ColumnSameWidth=0
+	EnumColumnWidth=150,200,150,120,150,100,100,250,250
+	EnumRowHeight=90,90,90,90
+	Text="杭州","纺织品","3","袋","0000541","01","20","陈峰","13185502533"
+	FontName="宋体"
+	ColumnFontHeight=6,6,6,6,6,6,6,6,6
+	FontWidth=6
+	FontBold=0
+	FontItalic=0
+	FontUnderline=0
+	CellBackColor=255|255|255,255|255|255,255|255|255,255|255|255,255|255|255,255|255|255
+	CellForeColor=0|0|0,0|0|0,0|0|0,0|0|0,0|0|0,0|0|0
+	CellTextColor=0|0|0,0|0|0,0|0|0,0|0|0,0|0|0,0|0|0
+	ColumnAlign=0,0,0,1,0,0,0,0,0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblLongSheetID2"
+    ObjectIndex = 12
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=400,1050,200,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "签发单号"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 7
+    FontWidth = 8
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblEndStation"
+    ObjectIndex = 13
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=280,1250,50,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "到站"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblLicense"
+    ObjectIndex = 15
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=450,1250,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "车号"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblTotalPrice"
+    ObjectIndex = 16
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=850,1250,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "合计"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblTotalPriceBig"
+    ObjectIndex = 17
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1150,1250,1000,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "合计(大写)"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblTotalNumber"
+    ObjectIndex = 19
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=700,1250,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = ""
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblLongSheetID3"
+    ObjectIndex = 23
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=400,1990,200,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = "签发单号"
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblLicense"
+    ObjectIndex = 25
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1170,2550,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = ""
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+	ObjectStyle=3
+	ObjectName="装车清单表格"
+	ObjectIndex=27
+	BorderLineStyle=1
+	BorderLineWidth=1
+	Size=300,2140,1000,980
+	ForeColor=0|0|0
+	BackColor=255|255|255
+	Transparent=1
+	Visible=1
+	Row=4
+	Column=5
+	NoCellBorder = 0
+	SameHeight=105
+	SameWidth=100
+	RowSameHeight=0
+	ColumnSameWidth=0
+	EnumColumnWidth=150,200,150,120,150
+	EnumRowHeight=110,110,110,110
+	Text="杭州","0000541","纺织品","3","袋"
+	FontName="宋体"
+	ColumnFontHeight=6,6,6,6,6
+	FontWidth=6
+	FontBold=0
+	FontItalic=0
+	FontUnderline=0
+	CellBackColor=255|255|255,255|255|255,255|255|255,255|255|255,255|255|255,255|255|255
+	CellForeColor=0|0|0,0|0|0,0|0|0,0|0|0,0|0|0,0|0|0
+	CellTextColor=0|0|0,0|0|0,0|0|0,0|0|0,0|0|0,0|0|0
+	ColumnAlign=0,0,0,1,0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblShipperPhone"
+    ObjectIndex = 28
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=430,2190,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 0
+    Caption = "发件人电话"
+    TextAlign = 0
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 6
+    FontWidth = 6
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblCarryTime"
+    ObjectIndex = 29
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=610,100,200,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = ""
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblCarryTime2"
+    ObjectIndex = 30
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=610,1050,200,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = ""
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblCarryTime3"
+    ObjectIndex = 31
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=610,1990,200,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = ""
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+Begin Object
+    ObjectStyle = 2
+    ObjectName = "lblLicense2"
+    ObjectIndex = 32
+    BorderLineStyle = 1
+    BorderLineWidth = 0
+    BorderVisible = 1
+    Size=1450,2550,100,50
+    BackColor=255|255|255
+    ForeColor=0|0|0
+    TextColor=0|0|0
+    Transparent = 1
+    Visible = 1
+    Caption = ""
+    TextAlign = 1
+    Offset=2,2
+    FontName = "宋体"
+    FontHeight = 5
+    FontWidth = 5
+    FontBold = 0
+    FontItalic = 0
+    FontUnderline = 0
+End Object
+
+End BillPrint
+

@@ -1,0 +1,11 @@
+mdlHtmlHelpCom = 88, 88, 544, 459, C
+mdCommonLib = -63, 98, 376, 331, Z
+mdAdvanceLib = 0, 0, 456, 371, C
+mdFunsVisual = -168, 129, 446, 500, C
+MDITicketMan = 44, 44, 569, 415, , 22, 22, 547, 393, CZ
+mdMain = 60, 65, 433, 456, 
+frmParmSet = 66, 66, 454, 387, CZ, 22, 22, 497, 456, C
+frmGetTicket = 119, 118, 575, 485, CZ, -78, 34, 378, 405, C
+frmManTicketMan = 0, 0, 456, 371, C, -10, 57, 446, 428, CZ
+frmGetNullTicket = 0, 0, 0, 0, C, 154, 154, 1255, 617, C
+frmManNullTicketMan = 0, 0, 0, 0, C, 176, 176, 1277, 639, CZ

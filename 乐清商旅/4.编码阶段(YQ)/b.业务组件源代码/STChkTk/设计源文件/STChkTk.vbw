@@ -1,0 +1,9 @@
+mdMsgUp = 0, 0, 0, 0, C
+mdChkTk = 0, 0, 0, 0, C
+mdCommonLib = 0, 0, 0, 0, C
+mdMiddleLib = 0, 0, 0, 0, C
+mdStation = 0, 0, 0, 0, C
+mdErrorLib = 216, 128, 650, 679, C
+CheckTicket = 58, 67, 583, 508, Z
+mdSystem = 59, 159, 695, 557, C
+CTReport = 0, 0, 0, 0, C

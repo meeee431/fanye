@@ -1,0 +1,12 @@
+mdPrice = 0, 0, 0, 0, C
+mdStation = 0, 0, 0, 0, C
+mdMiddleLib = 0, 0, 0, 0, C
+mdErrorLib = 0, 0, 0, 0, C
+mdCommonLib = 0, 0, 0, 0, C
+mdSystem = 0, 0, 0, 0, C
+TicketItem = 0, 0, 0, 0, C
+TicketPriceFormula = 0, 0, 0, 0, C
+TicketPriceMan = 0, 0, 0, 0, C
+HalfTicketPrice = 0, 0, 0, 0, C
+PriceSheetReport = 0, 0, 0, 0, C
+RoutePriceTable = 0, 0, 0, 0, C

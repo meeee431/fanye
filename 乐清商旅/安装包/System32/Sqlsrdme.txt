@@ -1,0 +1,241 @@
+****************************************************************
+                      MICROSOFT SQL SERVER
+                MICROSOFT SQL SERVER ODBC 驱动程序
+                     安装自述文件，3.7 版
+****************************************************************
+
+本文件说明如何在 Microsoft SQL Server 6.5 版或更早的版本上使用
+Microsoft SQL Server ODBC 驱动程序 3.7 版。
+
+因 Microsoft SQL Server ODBC 驱动程序 3.7 版与 SQL Server 7.0
+一起发行，SQL Server 7.0 用户请参照 SQL Server 7.0
+文件中对此驱动程序的说明，而不必以此自述文件中的说明为准。　
+
+包括的主题有：
+
+1. 概况
+2. 在服务器上安装 Instcat.sql
+3. 获取 SQL Server Client Net-Libraries
+4. 关于在 SQL Server 上使用 ODBC 驱动程序的文档来源
+5. 在开发环境下使用驱动程序
+6. 兼容性问题
+
+****************************************************************
+1.概况
+
+SQL Server ODBC 驱动程序 3.7 版是一个 Win32 ODBC 3.51 版的驱动
+程序。它可使用于以 ODBC 2.X 和 ODBC 3.X API 编写的应用程序。并
+适用于 Microsoft SQL Server 4.21a 或以上版本，此驱动程序可在
+Windows 98、Windows 95 或 Windows NT (4.0 版或更新版本)环境下运行。
+
+在安装 SQL Server ODBC 驱动程序 3.7 版的同时会安装一个
+Win32 SQL Server 7.0 客户端网络实用程序。此 SQL Server 客户端网络
+实用程序可适用于 SQL Server 4.21a 或更新版本，以及来自那些 
+SQL Server 版本中的 Client Net-Libraries。　
+
+****************************************************************
+2. 在服务器上安装 Instcat.sql
+
+SQL Server ODBC 驱动程序使用一套系统存储程序，我们知道的目录存储
+程序，就是从 SQL Server 系统目录获取信息。每个不同版本的 
+SQL Server ODBC 驱动程序皆有其特定版本的目录存储程序。包含在 
+SQL Server ODBC 驱动程序 3.7 版中的 Instcat.sql 文件可局部性升级
+目录存储程序，以使其成为本驱动程序所适用的存储程序版本。SQL Server
+ODBC 驱动程序 3.7 版中所附的Instcat.sql 文件与 SQL Server 7.0 中所
+附的 Instcat.sql 文件相同，SQL Server 7.0 站点不需运行此 
+Instcat.sql 文件。
+
+SQL Server 系统管理员必须使用 Instcat.sql 脚本来升级目录存储
+程序以保证驱动程序的正常运行。升级的目录存储程序不影响旧版的 SQL
+Server 客户端的运行。SQL Server 自 4.21a 版至 6.5 版的所有版本皆需
+完成此升级步骤，若您使用 SQL Server 7.0　您可不需进行升级。
+
+若要在 SQL Server 4.21a　6.0 或 6.5 上进行升级，系统管理员可使用
+isql 实用程序运行 Instcat.sql 脚本，以升级目录存储程序(请参阅以下
+操作说明)。在对主数据库作任何修改以前，系统管理员应该把它备份
+下来。要运行 isql 实用程序，您必须作为 SQL Server 的客户端工作站
+来安装计算机。
+
+在命令提示下，使用 isql 实用程序来运行 Instcat.sql 脚本。例如：
+
+C:>ISQL /Usa /Psa_password /Sserver_name /ilocation\Instcat.Sql 
+
+其中
+sa_password 
+	是系统管理员的密码。
+server_name 
+	是 SQL Server 宿主的服务器名称。
+location 
+	是 Instcat.Sql 所在位置的完全路径。
+
+Instcat.sql 脚本产生很多信息。多数信息指示该脚本发出的 
+Transact-SQL语句影响了多少行。尽管输出要扫描一遍看是否有指示执行
+错误的信息，但多数信息都可以被忽略。当 Instcat.sql 在 
+SQL Server 6.0 版上运行时，说明不存在对象 sp_MS_upd_sysobj_category 
+的信息可以被忽略。最后的信息应该显示 Instcat.sql 被成功地完成了。
+当没有足够的主数据库空间来存储目录存储程序或记录现有程序的变化时，
+Instcat.sql 脚本失败。
+
+****************************************************************
+3. 获取 SQL Server Client Net-Libraries
+
+SQL Server ODBC 驱动程序使用 SQL Server Client Net-Libraries 
+与服务器交换信息。SQL Server ODBC 驱动程序 3.7 版也使用 
+SQL Server 客户端配置实用程序来管理与 ODBC 数据源相关联的 
+Net-Library。
+
+SQL Server ODBC 驱动程序 3.7 版只安装一个 Net-Library，
+即：Win32 命名管道 Net-Library Dbnmpntw.dll。
+
+您可以与旧版本的 Win32 Net-Libraries 一起使用 SQL Server ODBC 
+驱动程序 3.7 版。如果不是命名管道 Net-Library 的 Net-Library 
+需要连接到 SQL Server 上，您可以使用与您的 SQL Server 版本一起
+发行的 Net-Library。您可以在安装您的 SQL Server 版本的 
+Win32 SQL Server 客户端实用程序时，得到 SQL Server Net-Libraries。
+
+与 SQL Server ODBC 驱动程序 3.7 版一起安装的 SQL Server 客户端
+网络实用程序可以与 SQL Server 4.21a 或更新版本的 
+Client Net-Libraries 一起使用。
+
+****************************************************************
+4. 关于在 SQL Server 上使用 ODBC 驱动程序的文档来源
+
+Microsoft SQL Server ODBC 驱动程序 3.7 版的驱动程序与 
+SQL Server 7.0 中所附的驱动程序相同。SQL Server 7.0 用户可参照 
+SQL Server 7.0 文档中对 SQL Server ODBC 驱动程序 3.7 版的说明。
+
+在与 SQL Server (4.21a　6.0 或 6.5 版) 一同使用 SQL Server ODBC
+驱动程序 3.7 版时，驱动程序的操作方式与旧版本的驱动程序相同，　
+您可使用您的 SQL Server 版本中的附加驱动程序特定信息，包括：
+
+* 较旧版本的 SQL Server 中所附的 drvssrvr.hlp 文件。　
+
+* SQL Server 6.5 手册中的“Programming ODBC for Microsoft 
+SQL Server”一节。　
+
+* MSDN 上所提供的白皮书“Using ODBC with Microsoft SQL Server”。
+
+Microsoft SQL Server ODBC 驱动程序 3.7 版也适用“Using ODBC with 
+Microsoft SQL Server”技术说明中的附加驱动程序特定信息，您可自
+MSDN 获取此资料。　
+
+与 SQL Server ODBC 驱动程序 3.7 版一起发行的 Sqlsodbc.hlp 文件
+仅包含 SQL Server ODBC 数据源向导的上下文敏感的帮助。与 
+SQL Server ODBC 驱动程序的早期版本一起发行的 Drvssrvr.hlp 
+文件包含老版本驱动程序的驱动程序特定信息。包含于旧版本 
+Drvssrvr.hlp 文件的信息可见于 SQL Sever 6.5 手册的
+“Programming ODBC for Microsoft SQL Server”。
+
+***************************************************************
+5. 在开发环境下使用驱动程序
+
+SQL Server ODBC 驱动程序为几个 ODBC 函数调用使用驱动程序特定
+参数。这些驱动程序特定参数的 #define 和驱动程序特定的 
+C 和 C++ 编程结构的说明都包含在所附的 Odbcss.h 文件中。
+
+SQL Server ODBC 驱动程序 3.7 版可适用下列原始资料中所含的 
+Odbss.h 文件：　
+
+* SQL Server 7.0
+
+* SQL Server 6.5 Service Pack 2 (SP2) 或更新的版本
+
+* MDAC SDK
+
+MDAC SDK 为 Microsoft Developer Network Professional 版的一部分，
+您也可从以下 Microsoft 网址下载此 SDK：　
+www.microsoft.com/data。　
+您也可从 Microsoft Press 出版的“Microsoft ODBC 3.0 软件开发工具
+包和程序员参考”上获得 SDK 的有关信息。　 
+
+****************************************************************
+6. 兼容性问题
+
+因 ODBC 驱动程序 3.7 版为附加于 SQL Server 7.0 内一同送交用户的，　
+SQL Server 7.0 用户应参照 SQL Server 7.0 内的 ODBC 文档。此章节
+中所述的兼容性问题仅供在较旧版本的 SQL Server (4.21a　6.0 与 6.5) 
+上运行此驱动程序时参考使用。　
+
+当在 ODBC 管理员实用程序或应用程序调用 SQLConfigDataSource 增加
+或配置数据源并要求驱动程序提示用户信息时，SQL Server ODBC 驱动程
+序 3.7 版显示一个新的向导。在向导中单击“帮助”按钮进入向导文档。
+
+在与 SQL Server 6.5一起发行的 SQL Server ODBC 驱动程序 2.65 版
+中，SQL_COPT_SS_PERF_QUERY_INTERVAL 以秒工作而非微秒，如何使用
+已被记入文档(参见知识库文章 Q157753)。在 SQL Server ODBC 驱动程
+序 3.7 版中，SQL_COPT_SS_PERF_QUERY_INTERVAL 如文档所述改变为以
+微秒工作。
+
+下面的改变只影响使用 ODBC 3.X API 所写的应用程序。它们不影响使用 
+ODBC 2.X API 所写的应用程序。这些变化将不影响在多数 ODBC 应用程
+序中处理的结果集。
+
+在以前版本的 SQL Server ODBC 驱动程序中，在批处理或存储程序中相邻
+的 PRINT 或 RAISERROR 语句在一个结果集中一起返回它们的信息。在
+SQL Server ODBC 驱动程序 3.7 版中，每个 SQL 语句的信息以单独的
+结果集返回。在位于下一个 SQL 语句信息的每个信息之间，必须调用 
+SQLMoreResults。来自单个 SQL 语句的信息，如 DBCC 语句，全部以单个
+结果集返回，在每个信息之间没有必要调用 SQLMoreResults。
+
+在以前版本的 SQL Server ODBC 驱动程序中,批处理或存储程序中第一条语
+句上的具有严重性 11 或更高的运行错误或 RAISERROR 总是导致 
+SQLExecute、SQLExecDirect 或 SQLParamData 返回 SQL_ERROR。在
+SQL Server ODBC 驱动程序 3.7 版中，SQLExecute、SQLExecDirect 或 
+SQLParamData 仅在第一条语句之后没有其他语句执行时返回 SQL_ERROR。
+如果任何其他语句在第一条语句之后执行，即使是简单的没有返回值的 
+RETURN 语句，那么 SQLExecute 或 SQLExecDirect 将返回 
+SQL_SUCCESS_WITH_INFO。在使用 SQLGetDiagRec 处理 
+SQL_SUCCESS_WITH_INFO 信息之后，调用位于下一个结果集上的 
+SQLMoreResults。
+
+当先前版本的驱动程序在批处理或存储程序的第一条语句上遇到错误时，
+SQLExecute 或 SQLExecDirect 返回 SQL_ERROR 之后，语句句柄可以用
+于其他 SQL 语句。当 3.7 版驱动程序返回 SQL_SUCCESS_WITH_INFO 时，
+语句没有释放不能处理其他 SQL 语句，除非 SQLMoreResults 返回 
+SQL_NO_DATA 或跟随 RAISERROR 的所有结果集已经被关闭。如果没有结果
+集跟随错误消息，那么 SQLCloseCursor 不能被调用；SQLFreeStmt
+(SQL_CLOSE) 或 SQLMoreResults 必须被调用以便释放语句句柄来处理其
+他 SQL 语句：
+
+CREATE PROCEDURE TestPrc @Parm1 as
+IF (@Parm1 IS NULL)
+BEGIN
+	RAISERROR ('Parm1 cannot be NULL', 11, 1)
+	RETURN
+END
+SELECT * FROM sysusers WHERE suid = @Parm1
+GO
+
+执行下列语句：
+
+SQLExecDirect(hstmt, "{ call TestPrc (NULL) }", SQL_NTS);
+
+当使用老版本的 SQL Server ODBC 驱动程序时，或如果应用程序使用 
+ODBC 2.X API 时，SQLExecDirect 返回 SQL_ERROR。在 
+SQLGetDiagRec 返回 SQL_NO_DATA 或 SQLError 返回 
+SQL_NO_DATA_FOUND 之后，语句句柄被释放来执行其他 SQL 语句。
+
+当从写到 ODBC 3.X API 的应用程序中使用 SQL Server ODBC 
+驱动程序 3.7 版时，SQLExecDirect 返回 SQL_SUCCESS_WITH_INFO。
+在 SQLGetDiagRec 返回 SQL_NO_DATA 之后，语句句柄不能用来处理
+其他 SQL 语句，除非 SQLMoreResults 返回 SQL_NO_DATA 或调用 
+SQLFreeStmt(SQL_CLOSE)。
+
+在先前版本的 SQL Server ODBC 驱动程序中，当应用程序执行一条
+不影响行的搜索 UPDATE 或 DELETE 语句时，SQLExecute、
+SQLExecDirect 或 SQLParamData 返回 SQL_SUCCESS。在这种情况下，
+3.7 版驱动程序仍然返回 SQL_SUCCESS 给用 ODBC 2.X API 所写
+的应用程序，但是它返回 SQL_NO_DATA 给用 ODBC 3.X API 所写的
+应用程序。如果收到 SQL_SUCCESS 的 ODBC 2.X 应用程序或收到 
+SQL_NO_DATA 的 ODBC 3.X 应用程序，然后调用 SQLRowCount，
+SQLRowCount 返回计数为零。
+
+ODBC 3.X 定义返回结果的方法比 ODBC 2.X 清楚。早期版本的 
+SQL Server ODBC 驱动程序返回输出参数的值，并当 ODBC 2.X 函数 
+SQLFetch 或 SQLExtendedFetch 在存储程序返回的最后结果集上返回 
+SQL_NO_DATA 时返回代码。SQL Server ODBC 驱动程序 3.7 版当
+由 ODBC 2.X 应用程序调用时保留了这种行为。但是，当
+SQL Server ODBC 驱动程序 3.7 版由 ODBC 3.X 
+应用程序调用时，驱动程序不返回输出参数或返回代码，除非 
+SQLMoreResults 返回 SQL_NO_DATA。
+****************************************************************

@@ -1,0 +1,12 @@
+mdCommonLib = 198, 143, 632, 684, C
+mdMiddleLib = 198, 143, 632, 684, C
+mdErrorLib = 0, 0, 782, 367, I
+mdStation = 0, 0, 0, 0, C
+mdSystem = 0, 0, 0, 0, C
+mdTSvr = 0, 0, 657, 479, C
+ClientTicket = 66, 87, 848, 454, C
+ServiceTicket = 66, 66, 1081, 431, Z
+SellTicketClient = 44, 44, 625, 413, 
+SellTicketService = 110, 110, 691, 479, 
+NetSellTicketClient = 220, 220, 877, 699, 
+NetSellTicketService = 154, 154, 1329, 519, 

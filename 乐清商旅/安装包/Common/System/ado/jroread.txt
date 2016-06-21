@@ -1,0 +1,35 @@
+----------------------------------------------
+Microsoft Jet and Replication Objects 自述文件
+----------------------------------------------
+
+(c) 1998 Microsoft Corporation. All rights reserved.
+
+本文档是 Microsoft Jet and Replication Objects 文档的增补部分，提供一些最新的或其他方面的信息。
+
+----
+目录
+----
+
+1. 产品说明
+   
+2. 技术说明
+
+3. 已知错误、限制和解决方法
+
+-----------
+1. 产品说明
+-----------
+Microsoft Jet and Replication Objects (JRO) 允许向特定于 Microsoft Jet Database Engine 的应用程序添加特性。由于 Jet 和 Replication 对象要连接到 ADO Connection 对象，所以它们基本上是基于 Microsoft ActiveX Data Objects (ADO) 的。但是，Jet 和 Replication 对象仅用于 Microsoft Jet 数据库。
+
+-----------
+2. 技术说明
+-----------
+目前无技术说明。
+
+---------------------------
+3. 已知错误、限制和解决方法
+---------------------------
+
+以下是 Jet 和 Replication 对象已知错误的列表。
+
+从未在 Microsoft Access 打开的、在代码中使之可复制的数据库将始终拥有本地工程（窗体、报表、宏、模块），并且这些数据库永远无法更改以使工程可以复制。这是因为如果数据库在使之可复制之前从未在 Access 中打开，所以不存在控制该功能 (mSysAccessObjects) 的系统表。一旦数据库可以复制，则用户将无法更改工程的可复制性。

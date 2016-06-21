@@ -1,0 +1,6 @@
+mdCommonLib = -76, 28, 440, 261, C
+mdErrorLib = 0, 0, 0, 0, C
+mdSystem = 22, 22, 478, 391, C
+mdStation = 0, 0, 0, 0, C
+mdMiddleLib = -95, 20, 453, 253, C
+TicketMan = 104, 153, 560, 522, Z

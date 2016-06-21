@@ -1,0 +1,56 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
+Reference=*\G{546BB720-2154-4486-8851-F5EDCB250578}#1.0#0#..\..\..\..\..\..\..\WINDOWS\system32\STReSch.dll#RTStation Run Environment Scheme Service
+Reference=*\G{3A464B8B-5659-42F7-AB63-EACA2C544FFA}#2.0#0#..\..\..\..\..\..\..\WINDOWS\system32\STSystemBase.dll#RTStation System Module
+Reference=*\G{00000200-0000-0010-8000-00AA006D2EA4}#2.0#0#..\..\..\..\..\..\..\Program Files\Common Files\system\ado\msado20.tlb#Microsoft ActiveX Data Objects 2.0 Library
+Reference=*\G{EE887419-0123-40D6-9B39-ED1839847C02}#1.0#0#..\..\..\..\..\..\..\WINDOWS\system32\RTBaseLib.dll#RTsoft Application Base Service
+Reference=*\G{8EB69D8F-B4F4-415A-959A-F6480A9C590C}#6.3#0#..\..\..\..\..\..\..\WINDOWS\system32\STRglSch.dll#RTStation Regular Scheme Service
+Reference=*\G{2A103C99-E5B2-4C6C-A4DD-9FAD5EE13A8A}#1.1#0#..\..\..\..\..\..\..\WINDOWS\system32\RTSndMsg.dll#RTStation Send Message Service
+Reference=*\G{D82A763C-E967-464E-85A0-8079CC08F881}#1.1#0#..\..\..\..\..\..\..\WINDOWS\system32\RTCore.dll#RTsoft Core Service
+Object={831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0; mscomctl.ocx
+UserControl=Systray.ctl
+Module=mdlRunRev; mdlRunRev.bas
+Module=mSysTray; Systray.bas
+Module=mdlHtmlHelpCom; mdlHtmlHelpCom.bas
+Module=mdCommonLib; mdCommonLib.bas
+Module=mdAdvanceLib; mdAdvanceLib.bas
+Form=frmMake.frm
+Module=mdMiddleLib; mdMiddleLib.bas
+IconForm="frmMake"
+Startup="Sub Main"
+HelpFile=""
+Title="PSTRunRev"
+ExeName32="PSTRunRev.exe"
+Path32="..\目标文件"
+Command32="admin,,2016-03-01,[123]"
+Name="PSTRunRev"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=0
+MinorVer=0
+RevisionVer=7
+AutoIncrementVer=0
+ServerSupportFiles=0
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+DebugStartupOption=0
+
+[RVB]
+DeleteClass1=mdCommonMid
+DeleteClass2=Module1
+
+[MS Transaction Server]
+AutoRefresh=1

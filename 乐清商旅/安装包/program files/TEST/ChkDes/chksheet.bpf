@@ -1,0 +1,278 @@
+System=RTFPrint
+Version=1.0
+Design=RTSoft
+URL=www.rtsoft.com.cn
+Begin RTFPrint
+  Offset=5,0
+  Rows=33
+
+  Begin Object
+    ObjectIndex=1
+    ObjectName=始发车站
+    Caption=新城站
+    Position=15,3
+    CharNum=8
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=2
+    ObjectName=检票口
+    Caption=25
+    Position=35,3
+    CharNum=2
+    FontSize=87
+    Visible=1
+   Begin Object
+    ObjectIndex=3
+    ObjectName=检票员
+    Caption=cf
+    Position=52,3
+    CharNum=0
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=4
+    ObjectName=路单号
+    Caption=12345678
+    Position=66,3
+    CharNum=10
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=5
+    ObjectName=车次
+    Caption=10001
+    Position=11,5
+    CharNum=5
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=6
+    ObjectName=线路
+    Caption=温州--宁波
+    Position=32,5
+    CharNum=12
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=7
+    ObjectName=发车时间
+    Caption=13:10
+    Position=66,5
+    CharNum=5
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=8
+    ObjectName=车次序号
+    Caption=1
+    Position=15,7
+    CharNum=2
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=9
+    ObjectName=车牌
+    Caption=浙C12345
+    Position=31,7
+    CharNum=8
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=10
+    ObjectName=参运公司
+    Caption=温州长运
+    Position=66,7
+    CharNum=10
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=11
+    ObjectName=站点和票种
+    Caption=站点票种
+    Position=5,9
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=12
+    ObjectName=人数和票价名称
+    Caption=人数票价
+    Position=5,11
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=13
+    ObjectName=站1
+    Caption=乐清
+    Position=5,13
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=14
+    ObjectName=站2
+    Caption=温岭
+    Position=5,14
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=15
+    ObjectName=站3
+    Caption=台州
+    Position=5,15
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=16
+    ObjectName=站4
+    Caption=临海
+    Position=5,16
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=17
+    ObjectName=站5
+    Caption=天台
+    Position=5,17
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=18
+    ObjectName=站6
+    Caption=新昌
+    Position=5,18
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=19
+    ObjectName=站7
+    Caption=嵊州
+    Position=5,19
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=20
+    ObjectName=站8
+    Caption=绍兴
+    Position=5,20
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=21
+    ObjectName=站9
+    Caption=合计行
+    Position=5,21
+    CharNum=80
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=22
+    ObjectName=站10
+    Caption=2005-11-13
+    Position=5,22
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=23
+    ObjectName=站11
+    Caption=2005-11-13
+    Position=5,23
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=24
+    ObjectName=站12
+    Caption=2005-11-13
+    Position=5,24
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=25
+    ObjectName=站13
+    Caption=2005-11-13
+    Position=5,25
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=26
+    ObjectName=站14
+    Caption=2005-11-13
+    Position=5,26
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=27
+    ObjectName=站15
+    Caption=2005-11-13
+    Position=5,27
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=28
+    ObjectName=站16
+    Caption=2005-11-13
+    Position=5,28
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=29
+    ObjectName=站17
+    Caption=2005-11-13
+    Position=5,29
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+   Begin Object
+    ObjectIndex=30
+    ObjectName=站18
+    Caption=2005-11-13
+    Position=5,30
+    CharNum=40
+    FontSize=87
+    Visible=1
+  End Object
+End RTFPrint

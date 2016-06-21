@@ -1,0 +1,7 @@
+mdAdvanceLib = 0, 0, 0, 0, C
+mdCommonLib = 0, 0, 0, 0, C
+mdErrorLib = 0, 0, 0, 0, C
+mdMsgCommon = 0, 0, 0, 0, C
+Form1 = 25, 25, 873, 344, Z, 0, 0, 0, 0, C
+mdlMain = 0, 0, 0, 0, C
+mdMiddleLib = 0, 0, 0, 0, C

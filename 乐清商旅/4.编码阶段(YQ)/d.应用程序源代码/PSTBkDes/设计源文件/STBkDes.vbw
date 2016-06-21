@@ -1,0 +1,13 @@
+mdBkDes = 66, 87, 679, 446, C
+frmRESeat = 0, 0, 0, 0, C, 88, 116, 701, 476, C
+frmREBusAttr = 0, 0, 0, 0, C, 110, 145, 723, 505, C
+frmREBus = 0, 0, 0, 0, C, 132, 174, 745, 534, C
+frmSeat = 0, 0, 0, 0, C, 0, 0, 613, 360, C
+mdCommonLib = 44, 44, 1145, 507, C
+mdFunsVisual = 0, 0, 0, 0, C
+mdlHtmlHelpCom = 0, 0, 0, 0, C
+mdAdvanceLib = 0, 0, 0, 0, C
+MDIBook = 88, 88, 1041, 551, C, 22, 29, 635, 389, C
+frmQuery = 110, 110, 1125, 475, C, 66, 87, 679, 447, C
+frmBookAttr = 0, 0, 0, 0, C, 88, 116, 701, 476, C
+frmBook = 88, 116, 701, 475, C, 44, 58, 657, 418, C

@@ -1,0 +1,9 @@
+mdCommonLib = 0, 0, 0, 0, C
+mdMiddleLib = 0, 0, 0, 0, C
+mdErrorLib = 0, 0, 0, 0, C
+mdStation = 0, 0, 0, 0, C
+mdSNRunPrj = 0, 0, 0, 0, C
+mdSystem = 0, 0, 0, 0, C
+Bus = 0, 0, 0, 0, C
+RegularScheme = 0, 0, 0, 0, C
+BusProject = 0, 0, 0, 0, C

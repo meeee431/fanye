@@ -1,0 +1,4061 @@
+
+(object Petal
+    version    	42
+    _written   	"Microsoft Visual Modeler 2.0.8139"
+    charSet    	134)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	9
+	    face       	"Tahoma"
+	    charSet    	134
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"3C3E4050039A"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"3C3E405301F5"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"3C3E40500399"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"3C3E4050039B"
+	logical_models 	(list unit_reference_list
+	    (object Class_Category "User Services"
+		attributes 	(list Attribute_Set
+		    (object Attribute
+			tool       	"VisualBasic"
+			name       	"TierPackage"
+			value      	"User Services"))
+		quid       	"3C3E40530226"
+		documentation 	"User services provide the visual interface for presenting information and gathering data in an application. The user services connect the user with the application and request the business and/or data services needed by the user to execute business tasks."
+		visible_categories 	(list visibility_relationship_list
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"Business Services"))
+			quid       	"3C3E4053022C"
+			supplier   	"Logical View::Business Services"
+			quidu      	"3C3E40530228")
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"Data Services"))
+			quid       	"3C3E4053022D"
+			supplier   	"Logical View::Data Services"
+			quidu      	"3C3E4053022A"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "Class1"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Creatable"
+				value      	("CreatableSet" 213)))
+			quid       	"3C43D671033E"
+			documentation 	"睿通报表组件"
+			stereotype 	"Class Module"
+			operations 	(list Operations
+			    (object Operation "ShowReport"
+				quid       	"3C50FF8002A4"
+				documentation 	"显示报表"
+				parameters 	(list Parameters
+				    (object Parameter "prsDataSource"
+					documentation 	"报表数据集对象"
+					type       	"ADODB.Recordset")
+				    (object Parameter "Byval pvCustomData"
+					documentation 	"自定义内容"
+					type       	"Variant"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "ExportTo"
+				quid       	"3C5100FE0145"
+				documentation 	"导出"
+				parameters 	(list Parameters
+				    (object Parameter "Byval pszFileName"
+					documentation 	"导出文件名"
+					type       	"String")
+				    (object Parameter "Byval pnExportType"
+					documentation 	
+|导出类型
+|1——EXCEL格式
+|2——文本格式
+|3——HTML格式
+					
+					type       	"Integer"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Print"
+				quid       	"3C5101060183"
+				documentation 	"打印"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "OpenDialog"
+				quid       	"3C51010A0200"
+				documentation 	"打开常用对话框"
+				parameters 	(list Parameters
+				    (object Parameter "Byval pnDialogType"
+					documentation 	
+|对话框类型
+|1——另存对话框
+|2——导出对话框
+|3——打印设置
+|4——页面设置
+					
+					type       	"Integer"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "SaveTo"
+				quid       	"3C510338036B"
+				documentation 	"保存"
+				parameters 	(list Parameters
+				    (object Parameter "Byval pszFileName"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "PrintView"
+				quid       	"3C5332B9035F"
+				documentation 	"打印预览"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "ShowReportEx"
+				quid       	"3C53363F024E"
+				documentation 	"多记录集报表"
+				parameters 	(list Parameters
+				    (object Parameter "prsDataSource()"
+					documentation 	"报表数据集对象"
+					type       	"ADODB.Recordset")
+				    (object Parameter "Byval pvCustomData"
+					documentation 	"自定义内容"
+					type       	"Variant"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "TemplateFile"
+				quid       	"3C5338F2016B"
+				stereotype 	"Let"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal Value"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "TemplateFile"
+				quid       	"3C5338F202FC"
+				stereotype 	"Get"
+				result     	"String"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "BackgroupFile"
+				quid       	"3C5338F203E2"
+				stereotype 	"Let"
+				parameters 	(list Parameters
+				    (object Parameter "ByVal Value"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "BackgroupFile"
+				quid       	"3C5338F30177"
+				stereotype 	"Get"
+				result     	"String"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "CellObject"
+				quid       	"3C5338F30267"
+				stereotype 	"Get"
+				result     	"Object"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "mTemplateFile"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"GenerateGetOperation"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"GenerateLetOperation"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"DataMemberName"
+					value      	"$relationship"))
+				quid       	"3C5100CB023C"
+				documentation 	"模板文档名"
+				type       	"String")
+			    (object ClassAttribute "mBackgroupFile"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"GenerateGetOperation"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"GenerateLetOperation"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"DataMemberName"
+					value      	"$relationship"))
+				quid       	"3C53252C0357"
+				documentation 	"背景图片文件"
+				type       	"String")
+			    (object ClassAttribute "mCellObject"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"GenerateGetOperation"
+					value      	FALSE)
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"DataMemberName"
+					value      	"$relationship"))
+				quid       	"3C53318E037E"
+				documentation 	"CELL组件"
+				type       	"Object"))
+			module     	"Component View::RTReport"
+			quidu      	"3C485F5C01E5"
+			language   	"Visual Basic")
+		    (object Class "Shell"
+			quid       	"3C43D6790050"
+			documentation 	"通用对话框对象")
+		    (object Class "ActiveEnv"
+			quid       	"3C50F6000293"
+			documentation 	"WORD活动环境"
+			module     	"Component View::RTWordTools"
+			quidu      	"3C485ED001F8")
+		    (object Class "FlagLibTemplate"
+			quid       	"3C50F624026D"
+			documentation 	"标识模板库"
+			module     	"Component View::RTWordTools"
+			quidu      	"3C485ED001F8")
+		    (object Class "Postil"
+			quid       	"3C50F6BC01CB"
+			documentation 	"批注"
+			module     	"Component View::RTWordTools"
+			quidu      	"3C485ED001F8"))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Package Overview"
+			quid       	"3C3E40530227"
+			title      	"Package Overview"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "Logical View::User Services::Class1" @1
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(960, 1120)
+				label      	(object ItemLabel
+				    Parent_View 	@1
+				    location   	(709, 760)
+				    nlines     	1
+				    max_width  	502
+				    justify    	0
+				    label      	"Class1")
+				stereotype 	(object ItemLabel
+				    Parent_View 	@1
+				    location   	(709, 716)
+				    anchor     	10
+				    nlines     	1
+				    max_width  	502
+				    justify    	0
+				    label      	"<<Class Module>>")
+				icon_style 	"Icon"
+				quidu      	"3C43D671033E"
+				compartment 	(object Compartment
+				    Parent_View 	@1
+				    location   	(709, 814)
+				    icon_style 	"Icon"
+				    anchor     	2
+				    nlines     	16
+				    max_width  	500)
+				width      	520
+				height     	830
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::User Services::Shell" @2
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(544, 1136)
+				label      	(object ItemLabel
+				    Parent_View 	@2
+				    location   	(463, 1091)
+				    nlines     	1
+				    max_width  	162
+				    justify    	0
+				    label      	"Shell")
+				icon_style 	"Icon"
+				quidu      	"3C43D6790050"
+				height     	112
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::User Services::ActiveEnv" @3
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(544, 288)
+				label      	(object ItemLabel
+				    Parent_View 	@3
+				    location   	(443, 243)
+				    nlines     	1
+				    max_width  	202
+				    justify    	0
+				    label      	"ActiveEnv")
+				icon_style 	"Icon"
+				quidu      	"3C50F6000293"
+				width      	220
+				height     	112
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::User Services::FlagLibTemplate" @4
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(496, 480)
+				label      	(object ItemLabel
+				    Parent_View 	@4
+				    location   	(343, 435)
+				    nlines     	1
+				    max_width  	306
+				    justify    	0
+				    label      	"FlagLibTemplate")
+				icon_style 	"Icon"
+				quidu      	"3C50F624026D"
+				width      	324
+				height     	112
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::User Services::Postil" @5
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(832, 400)
+				label      	(object ItemLabel
+				    Parent_View 	@5
+				    location   	(751, 355)
+				    nlines     	1
+				    max_width  	162
+				    justify    	0
+				    label      	"Postil")
+				icon_style 	"Icon"
+				quidu      	"3C50F6BC01CB"
+				height     	112
+				annotation 	8
+				autoResize 	TRUE)))))
+	    (object Class_Category "Business Services"
+		attributes 	(list Attribute_Set
+		    (object Attribute
+			tool       	"VisualBasic"
+			name       	"TierPackage"
+			value      	"Business Services"))
+		quid       	"3C3E40530228"
+		documentation 	"Business services respond to requests from the user (or other business services) in order to execute a business task. They accomplish this by requesting the data services needed and applying formal procedures and business rules to the relevant data. This protocol insulates the user from direct interaction with the database. Because business rules tend to change more frequently than the specific business tasks they support, they are ideal candidates for encapsulating in components that are physically separate from the application logic itself."
+		visible_categories 	(list visibility_relationship_list
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"User Services"))
+			quid       	"3C3E4053022E"
+			supplier   	"Logical View::User Services"
+			quidu      	"3C3E40530226")
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"Data Services"))
+			quid       	"3C3E4053022F"
+			supplier   	"Logical View::Data Services"
+			quidu      	"3C3E4053022A"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "IBasicCode"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Creatable"
+				value      	("CreatableSet" 219))
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Instancing"
+				value      	("CreatableSet" 2)))
+			quid       	"3C43CB790032"
+			documentation 	"基本码表接口"
+			stereotype 	"Interface"
+			operations 	(list Operations
+			    (object Operation "Add"
+				quid       	"3C43CC4B001E"
+				parameters 	(list Parameters
+				    (object Parameter "poInfo"
+					type       	"ADODB.Recordset"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Update"
+				quid       	"3C43CC700140"
+				parameters 	(list Parameters
+				    (object Parameter "pszID"
+					type       	"String")
+				    (object Parameter "poInfo"
+					type       	"ADODB.Recordset"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "Delete"
+				quid       	"3C43CC710280"
+				parameters 	(list Parameters
+				    (object Parameter "pszID"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "ListAllInfos"
+				quid       	"3C43CC720352"
+				result     	"ADODB.Recordset"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "GetInfo"
+				quid       	"3C43CC7303B6"
+				parameters 	(list Parameters
+				    (object Parameter "pszID"
+					type       	"String"))
+				result     	"ADODB.Recordset"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			module     	"::ARCHInteface (module spec)"
+			quidu      	"3C4E0C2702DA"
+			language   	"Visual Basic")
+		    (object Class_Category "Finance Man"
+			quid       	"3C43CA8C0258"
+			exportControl 	"Public"
+			logical_models 	(list unit_reference_list
+			    (object Class "IFinBusiness"
+				quid       	"3C3E609E0294"
+				documentation 	"财务业务处理接口"
+				stereotype 	"Interface"
+				operations 	(list Operations
+				    (object Operation "Register"
+					quid       	"3C3E60F203CA"
+					documentation 	"登记"
+					parameters 	(list Parameters
+					    (object Parameter "Byval prsInfo"
+						documentation 	"信息记录"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C3E6206005A"
+					documentation 	"修改"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String")
+					    (object Parameter "Byval prsInfo"
+						documentation 	"信息记录"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C3E620903DE"
+					documentation 	"凭证删除"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Audit"
+					quid       	"3C3E60FC0244"
+					documentation 	"审核"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String")
+					    (object Parameter "Byval pszAuditPerson"
+						documentation 	"审核人"
+						type       	"String")
+					    (object Parameter "Byval pdtOperDate"
+						documentation 	"审核日期"
+						type       	"Date"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Chalkup"
+					quid       	"3C3E617000C8"
+					documentation 	"记帐"
+					parameters 	(list Parameters
+					    (object Parameter "paszID()"
+						documentation 	"业务流水号数组"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "CancelAudit"
+					quid       	"3C3E617E0104"
+					documentation 	"撤消审核"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String")
+					    (object Parameter "Byval pszAuditPerson"
+						documentation 	"审核人"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "CancelChalkup"
+					quid       	"3C3E6198012C"
+					documentation 	"撤消记帐"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Setoff"
+					quid       	"3C3E62E302D0"
+					documentation 	"冲帐"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String")
+					    (object Parameter "Byval prsInfo"
+						documentation 	"信息记录"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C42494703A2"
+					documentation 	"得到指定业务记录"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListInfos"
+					quid       	"3C4249880050"
+					documentation 	"查询指定业务"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pdtStartDate"
+						documentation 	
+|开始日期
+|空=无开始日期
+						
+						type       	"Date")
+					    (object Parameter "Byval pdtEndDate"
+						documentation 	
+|结束日期
+|空=无结束日期
+						
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "MakeBusinessID"
+					quid       	"3C43D7B700D2"
+					documentation 	"生成业务代码"
+					result     	"String"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "ProjectProcess"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"Creatable"
+					value      	("CreatableSet" 219)))
+				quid       	"3C424FF90302"
+				documentation 	"项目形象进度"
+				stereotype 	"Class Module"
+				operations 	(list Operations
+				    (object Operation "Add"
+					quid       	"3C4E20B903A2"
+					parameters 	(list Parameters
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C4E20BA0028"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String")
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C4E20BA0064"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllInfos"
+					quid       	"3C4E20BA0096"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C4E20BA0104"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0))
+				module     	"Component View::BasicInfo"
+				quidu      	"3C485CFE03C4"
+				language   	"Visual Basic")
+			    (object Class "ManChargeItem"
+				quid       	"3C424FC300E6"
+				documentation 	"管理费用项目"
+				stereotype 	"Class Module"
+				operations 	(list Operations
+				    (object Operation "Add"
+					quid       	"3C4E20E6035C"
+					parameters 	(list Parameters
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C4E20E60398"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String")
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C4E20E70014"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllInfos"
+					quid       	"3C4E20E70050"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C4E20E70082"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0))
+				module     	"Component View::BasicInfo"
+				quidu      	"3C485CFE03C4"
+				language   	"Visual Basic")
+			    (object Class "Bank"
+				quid       	"3C424F4F0294"
+				documentation 	"开户银行"
+				stereotype 	"Class Module"
+				operations 	(list Operations
+				    (object Operation "Add"
+					quid       	"3C4E20CE00C8"
+					parameters 	(list Parameters
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C4E20CE00FA"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String")
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C4E20CE00FD"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllInfos"
+					quid       	"3C4E20CE0136"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C4E20CE0168"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0))
+				module     	"Component View::BasicInfo"
+				quidu      	"3C485CFE03C4"
+				language   	"Visual Basic")
+			    (object Class "AccountRpt"
+				quid       	"3C3EA3BF032A"
+				documentation 	"帐户报表"
+				operations 	(list Operations
+				    (object Operation "ListDetails"
+					quid       	"3C424DB80154"
+					documentation 	"明细帐查询"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pnAccountType"
+						documentation 	"帐户类别"
+						type       	"Integer")
+					    (object Parameter "Byval pdtStartDate"
+						documentation 	"开始日期"
+						type       	"Date")
+					    (object Parameter "Byval pdtEndDate"
+						documentation 	"结束日期"
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListDayReport"
+					quid       	"3C424DC303D4"
+					documentation 	"日报表查询"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pnAccountType"
+						documentation 	"帐户类别"
+						type       	"Integer")
+					    (object Parameter "Byval pdtStartDate"
+						documentation 	"开始日期"
+						type       	"Date")
+					    (object Parameter "Byval pdtEndDate"
+						documentation 	"结束日期"
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListMonthReport"
+					quid       	"3C424DD001F4"
+					documentation 	"月报表查询"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pnAccountType"
+						documentation 	"帐户类别"
+						type       	"Integer")
+					    (object Parameter "Byval pdtStartDate"
+						documentation 	"开始日期"
+						type       	"Date")
+					    (object Parameter "Byval pdtEndDate"
+						documentation 	"结束日期"
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListYearReport"
+					quid       	"3C424DD70096"
+					documentation 	"年报查询"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pnAccountType"
+						documentation 	"帐户类别"
+						type       	"Integer")
+					    (object Parameter "Byval pdtStartDate"
+						documentation 	"开始日期"
+						type       	"Date")
+					    (object Parameter "Byval pdtEndDate"
+						documentation 	"结束日期"
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "ProductFare"
+				quid       	"3C3EA3AD012C"
+				documentation 	"生产经营统计"
+				operations 	(list Operations
+				    (object Operation "Register"
+					quid       	"3C3EA470029E"
+					documentation 	"登记经营进度"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pdtMonth"
+						documentation 	"月份"
+						type       	"Date")
+					    (object Parameter "Byval prsPrjsProcess"
+						documentation 	"工程进度信息"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C3EA47002D0"
+					documentation 	"更改经营进度"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pdtMonth"
+						documentation 	"月份"
+						type       	"Date")
+					    (object Parameter "Byval pszProjectID"
+						documentation 	"项目代码"
+						type       	"String")
+					    (object Parameter "Byval prsPrjsProcess"
+						documentation 	"工程进度信息"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C3EA536000A"
+					documentation 	"删除经营登记"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pdtMonth"
+						documentation 	"月份"
+						type       	"Date")
+					    (object Parameter "Byval pszProjectID"
+						documentation 	
+|项目代码
+|空=所有项目
+						
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "CalFareStat"
+					quid       	"3C4238C80140"
+					documentation 	"计算部分生产经营情况"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pdtMonth"
+						documentation 	"月份"
+						type       	"Date")
+					    (object Parameter "Byval pszProjectID"
+						documentation 	
+|项目代码
+|空=所有项目
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListFareInfos"
+					quid       	"3C42431C03DE"
+					documentation 	"列举生产经营信息"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pdtMonth"
+						documentation 	"月份"
+						type       	"Date")
+					    (object Parameter "Byval pszProjectID"
+						documentation 	
+|项目代码
+|空=所有项目
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "FeeTransfer"
+				quid       	"3C3E990403A2"
+				documentation 	"内部费用调度"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"3C3E991D0096"
+					supplier   	"Logical View::Business Services::Finance Man::IFinBusiness"
+					quidu      	"3C3E609E0294")))
+			    (object Class "DeptOut"
+				quid       	"3C3E98A50276"
+				documentation 	"部门费用划出"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"3C3E98BD0244"
+					supplier   	"Logical View::Business Services::Finance Man::IFinBusiness"
+					quidu      	"3C3E609E0294"))
+				operations 	(list Operations
+				    (object Operation "SupplyBill"
+					quid       	"3C3E9A6B021C"
+					documentation 	"补充发票"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String")
+					    (object Parameter "Byval prsBillInfo"
+						documentation 	"发票信息"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListNotReturnInfos"
+					quid       	"3C424C7F03D4"
+					documentation 	"领款未结查询"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "ProjectCost"
+				quid       	"3C3E962E0096"
+				documentation 	"项目成本划出"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"3C3E964800BE"
+					supplier   	"Logical View::Business Services::Finance Man::IFinBusiness"
+					quidu      	"3C3E609E0294"))
+				operations 	(list Operations
+				    (object Operation "SupplyBill"
+					quid       	"3C3E96BD030C"
+					documentation 	"补充发票"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszID"
+						documentation 	
+|业务流水号
+|
+						
+						type       	"String")
+					    (object Parameter "Byval prsBillInfo"
+						documentation 	"发票信息"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListPrePayInfos"
+					quid       	"3C424BE60316"
+					documentation 	"预付款查询"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "BailOut"
+				quid       	"3C3E95D40348"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"3C3E95E1032A"
+					supplier   	"Logical View::Business Services::Finance Man::IFinBusiness"
+					quidu      	"3C3E609E0294")))
+			    (object Class "DeptIncome"
+				quid       	"3C3E953C032A"
+				documentation 	"部门费用划入"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"3C3E95AA0118"
+					supplier   	"Logical View::Business Services::Finance Man::IFinBusiness"
+					quidu      	"3C3E609E0294")))
+			    (object Class "MaterialOut"
+				quid       	"3C3E94E1019A"
+				documentation 	"甲供材料划出"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"3C3E95A7038E"
+					supplier   	"Logical View::Business Services::Finance Man::IFinBusiness"
+					quidu      	"3C3E609E0294")))
+			    (object Class "MaterialIncome"
+				quid       	"3C3E94D8015E"
+				documentation 	"甲供材料划入"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"3C3E95A403B6"
+					supplier   	"Logical View::Business Services::Finance Man::IFinBusiness"
+					quidu      	"3C3E609E0294")))
+			    (object Class "FundIncome"
+				quid       	"3C3E93C100DC"
+				documentation 	"工程款划入"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"3C3E959B0230"
+					supplier   	"Logical View::Business Services::Finance Man::IFinBusiness"
+					quidu      	"3C3E609E0294")))
+			    (object Class "AccountFrame"
+				quid       	"3C3E7D6A03D4"
+				documentation 	
+|帐户框架
+|可根据NOTES情况消除掉相关查询方法
+|
+				
+				operations 	(list Operations
+				    (object Operation "ListAccountDepts"
+					quid       	"3C3E834F0348"
+					documentation 	"列举帐户部门"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListCashAccounts"
+					quid       	"3C4278F2030C"
+					documentation 	"列举所有现金帐户"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListBankAccounts"
+					quid       	"3C427910003C"
+					documentation 	"列举银行帐户"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszDeptID"
+						documentation 	
+|部门代码
+|空=所有部门
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListFeeAccounts"
+					quid       	"3C42792802D0"
+					documentation 	"部门费用帐户"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListProjectAccounts"
+					quid       	"3C42793F0046"
+					documentation 	"根据部门列举项目帐户"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszDeptID"
+						documentation 	
+|部门代码
+|空=所有部门
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListHistAccounts"
+					quid       	"3C3E86F50014"
+					documentation 	"列举所有历史帐户"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "AccountsSum"
+					quid       	"3C3E896303DE"
+					documentation 	"计算帐户"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "HistoryAccount"
+				quid       	"3C3E416F0014"
+				documentation 	"历史帐户")
+			    (object Class "Account"
+				quid       	"3C3E4064038E"
+				documentation 	"内部帐户"
+				operations 	(list Operations
+				    (object Operation "Register"
+					quid       	"3C3E8D5200DC"
+					documentation 	"登记"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszAccountID"
+						documentation 	"帐户代码"
+						type       	"String")
+					    (object Parameter "Byval prsInfo"
+						documentation 	"信息记录"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C3E8D570000"
+					documentation 	"更改帐户"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszAccountID"
+						documentation 	"帐户代码"
+						type       	"String")
+					    (object Parameter "Byval prsInfo"
+						documentation 	"信息记录"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Freeze"
+					quid       	"3C3E8D5A0316"
+					documentation 	"冻结帐户"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszAccountID"
+						documentation 	"帐户代码"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "CancelFreeze"
+					quid       	"3C3E8D67021C"
+					documentation 	"解除冻结"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszAccountID"
+						documentation 	"帐户代码"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "WriteOff"
+					quid       	"3C3E8D6C0104"
+					documentation 	"注销帐户"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszAccountID"
+						documentation 	"帐户代码"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Expenditure"
+					quid       	"3C4A72580122"
+					documentation 	"收支处理"
+					parameters 	(list Parameters
+					    (object Parameter "pszAccountID"
+						documentation 	"帐户ID号"
+						type       	"String")
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfoByID"
+					quid       	"3C3E8DA00000"
+					documentation 	"根据帐户代码来得到帐户信息"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszAccountID"
+						documentation 	
+|帐户代码
+|
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetCashAccount"
+					quid       	"3C427D770316"
+					documentation 	"得到部门现金帐户"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszDeptID"
+						documentation 	
+|部门代码
+|
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetBankAccount"
+					quid       	"3C427FEC0276"
+					documentation 	"根据外部银行帐户得到银行帐户信息"
+					parameters 	(list Parameters
+					    (object Parameter "Byval BankAccountID"
+						documentation 	"外部银行帐户"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetFeeAccount"
+					quid       	"3C427D4B00F0"
+					documentation 	"得到指定部门帐户"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszDeptID"
+						documentation 	
+|部门代码
+|
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetProjectAccount"
+					quid       	"3C427D2D0212"
+					documentation 	"根据工程代码得到项目帐户信息"
+					parameters 	(list Parameters
+					    (object Parameter "Byval pszProjectID"
+						documentation 	
+|项目代码
+|
+						
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0))))
+			logical_presentations 	(list unit_reference_list
+			    (object ClassDiagram "Package Overview"
+				quid       	"3C43CA8C028A"
+				title      	"Package Overview"
+				zoom       	100
+				max_height 	28350
+				max_width  	21600
+				origin_x   	0
+				origin_y   	893
+				items      	(list diagram_item_list
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::IFinBusiness" @6
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(528, 1792)
+					label      	(object ItemLabel
+					    Parent_View 	@6
+					    location   	(353, 1520)
+					    nlines     	1
+					    max_width  	350
+					    justify    	0
+					    label      	"IFinBusiness")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@6
+					    location   	(353, 1476)
+					    anchor     	10
+					    nlines     	1
+					    max_width  	350
+					    justify    	0
+					    label      	"<<Interface>>")
+					icon       	"Interface"
+					icon_style 	"Label"
+					quidu      	"3C3E609E0294"
+					width      	368
+					height     	654
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::ProjectProcess" @7
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1520, 2688)
+					label      	(object ItemLabel
+					    Parent_View 	@7
+					    location   	(1292, 2522)
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"ProjectProcess")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@7
+					    location   	(1292, 2478)
+					    anchor     	10
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"<<Class Module>>")
+					icon_style 	"Icon"
+					quidu      	"3C424FF90302"
+					width      	474
+					height     	442
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::ManChargeItem" @8
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1792, 2240)
+					label      	(object ItemLabel
+					    Parent_View 	@8
+					    location   	(1564, 2074)
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"ManChargeItem")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@8
+					    location   	(1564, 2030)
+					    anchor     	10
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"<<Class Module>>")
+					icon_style 	"Icon"
+					quidu      	"3C424FC300E6"
+					width      	474
+					height     	442
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::Bank" @9
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(2096, 2704)
+					label      	(object ItemLabel
+					    Parent_View 	@9
+					    location   	(1868, 2538)
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"Bank")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@9
+					    location   	(1868, 2494)
+					    anchor     	10
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"<<Class Module>>")
+					icon_style 	"Icon"
+					quidu      	"3C424F4F0294"
+					width      	474
+					height     	442
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::AccountRpt" @10
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(720, 752)
+					label      	(object ItemLabel
+					    Parent_View 	@10
+					    location   	(538, 615)
+					    nlines     	1
+					    max_width  	364
+					    justify    	0
+					    label      	"AccountRpt")
+					icon_style 	"Icon"
+					quidu      	"3C3EA3BF032A"
+					width      	382
+					height     	296
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::ProductFare" @11
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1168, 416)
+					label      	(object ItemLabel
+					    Parent_View 	@11
+					    location   	(1020, 257)
+					    nlines     	1
+					    max_width  	296
+					    justify    	0
+					    label      	"ProductFare")
+					icon_style 	"Icon"
+					quidu      	"3C3EA3AD012C"
+					width      	314
+					height     	340
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::FeeTransfer" @12
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1200, 1120)
+					label      	(object ItemLabel
+					    Parent_View 	@12
+					    location   	(1080, 1075)
+					    nlines     	1
+					    max_width  	240
+					    justify    	0
+					    label      	"FeeTransfer")
+					icon_style 	"Icon"
+					quidu      	"3C3E990403A2"
+					width      	258
+					height     	112
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @13
+					stereotype 	TRUE
+					quidu      	"3C3E991D0096"
+					client     	@12
+					supplier   	@6
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::DeptOut" @14
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1168, 752)
+					label      	(object ItemLabel
+					    Parent_View 	@14
+					    location   	(967, 659)
+					    nlines     	1
+					    max_width  	402
+					    justify    	0
+					    label      	"DeptOut")
+					icon_style 	"Icon"
+					quidu      	"3C3E98A50276"
+					width      	420
+					height     	208
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @15
+					stereotype 	TRUE
+					quidu      	"3C3E98BD0244"
+					client     	@14
+					supplier   	@6
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::ProjectCost" @16
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(368, 1024)
+					label      	(object ItemLabel
+					    Parent_View 	@16
+					    location   	(198, 931)
+					    nlines     	1
+					    max_width  	340
+					    justify    	0
+					    label      	"ProjectCost")
+					icon_style 	"Icon"
+					quidu      	"3C3E962E0096"
+					width      	358
+					height     	208
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @17
+					stereotype 	TRUE
+					quidu      	"3C3E964800BE"
+					client     	@16
+					supplier   	@6
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::BailOut" @18
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1152, 1504)
+					label      	(object ItemLabel
+					    Parent_View 	@18
+					    location   	(1071, 1459)
+					    nlines     	1
+					    max_width  	162
+					    justify    	0
+					    label      	"BailOut")
+					icon_style 	"Icon"
+					quidu      	"3C3E95D40348"
+					height     	112
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @19
+					stereotype 	TRUE
+					quidu      	"3C3E95E1032A"
+					client     	@18
+					supplier   	@6
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::DeptIncome" @20
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1088, 1856)
+					label      	(object ItemLabel
+					    Parent_View 	@20
+					    location   	(963, 1811)
+					    nlines     	1
+					    max_width  	250
+					    justify    	0
+					    label      	"DeptIncome")
+					icon_style 	"Icon"
+					quidu      	"3C3E953C032A"
+					width      	268
+					height     	112
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @21
+					stereotype 	TRUE
+					quidu      	"3C3E95AA0118"
+					client     	@20
+					supplier   	@6
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::MaterialOut" @22
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1248, 2112)
+					label      	(object ItemLabel
+					    Parent_View 	@22
+					    location   	(1136, 2067)
+					    nlines     	1
+					    max_width  	224
+					    justify    	0
+					    label      	"MaterialOut")
+					icon_style 	"Icon"
+					quidu      	"3C3E94E1019A"
+					width      	242
+					height     	112
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @23
+					stereotype 	TRUE
+					quidu      	"3C3E95A7038E"
+					client     	@22
+					supplier   	@6
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::MaterialIncome" @24
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1248, 1296)
+					label      	(object ItemLabel
+					    Parent_View 	@24
+					    location   	(1105, 1251)
+					    nlines     	1
+					    max_width  	286
+					    justify    	0
+					    label      	"MaterialIncome")
+					icon_style 	"Icon"
+					quidu      	"3C3E94D8015E"
+					width      	304
+					height     	112
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @25
+					stereotype 	TRUE
+					quidu      	"3C3E95A403B6"
+					client     	@24
+					supplier   	@6
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::FundIncome" @26
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1184, 1648)
+					label      	(object ItemLabel
+					    Parent_View 	@26
+					    location   	(1063, 1603)
+					    nlines     	1
+					    max_width  	242
+					    justify    	0
+					    label      	"FundIncome")
+					icon_style 	"Icon"
+					quidu      	"3C3E93C100DC"
+					width      	260
+					height     	112
+					annotation 	8
+					autoResize 	TRUE)
+				    (object InheritView "" @27
+					stereotype 	TRUE
+					quidu      	"3C3E959B0230"
+					client     	@26
+					supplier   	@6
+					line_style 	0)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::AccountFrame" @28
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1696, 1024)
+					label      	(object ItemLabel
+					    Parent_View 	@28
+					    location   	(1485, 821)
+					    nlines     	1
+					    max_width  	422
+					    justify    	0
+					    label      	"AccountFrame")
+					icon_style 	"Icon"
+					quidu      	"3C3E7D6A03D4"
+					width      	440
+					height     	428
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::HistoryAccount" @29
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1808, 1536)
+					label      	(object ItemLabel
+					    Parent_View 	@29
+					    location   	(1618, 1483)
+					    nlines     	1
+					    max_width  	380
+					    justify    	0
+					    label      	"HistoryAccount")
+					icon_style 	"Icon"
+					quidu      	"3C3E416F0014"
+					width      	398
+					height     	128
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Finance Man::Account" @30
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(2064, 480)
+					label      	(object ItemLabel
+					    Parent_View 	@30
+					    location   	(1858, 189)
+					    nlines     	1
+					    max_width  	412
+					    justify    	0
+					    label      	"Account")
+					icon_style 	"Icon"
+					quidu      	"3C3E4064038E"
+					width      	430
+					height     	604
+					annotation 	8
+					autoResize 	TRUE)))))
+		    (object Class_Category "Manager Man"
+			quid       	"3C43CAF90014"
+			exportControl 	"Public"
+			logical_models 	(list unit_reference_list
+			    (object Class "MarketBid"
+				quid       	"3C43CCF50352"
+				documentation 	"市场及招标信息"
+				operations 	(list Operations
+				    (object Operation "RegisterMarkets"
+					quid       	"3C43CD5002EE"
+					documentation 	"登记市场信息"
+					parameters 	(list Parameters
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "RegisterBids"
+					quid       	"3C43CD5200E6"
+					documentation 	"登记招标信息"
+					parameters 	(list Parameters
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "AppenBidInfo"
+					quid       	"3C43CD53014A"
+					documentation 	"补充招标信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "UpdateItems"
+					quid       	"3C43CD540172"
+					documentation 	"更改元素项"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "DeleteBid"
+					quid       	"3C43CD5501D6"
+					documentation 	"删除指定招标信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetMarketInfo"
+					quid       	"3C43CD560384"
+					documentation 	"得到市场信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetBidInfo"
+					quid       	"3C43CD570348"
+					documentation 	"得到招标信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListMarketInfos"
+					quid       	"3C43CD580334"
+					documentation 	"列举指定范围内的市场信息"
+					parameters 	(list Parameters
+					    (object Parameter "pdtBeginDate"
+						type       	"Date")
+					    (object Parameter "pdtEndDate"
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListBidInfos"
+					quid       	"3C43CE8E0334"
+					documentation 	"列举指定范围内的招标信息"
+					parameters 	(list Parameters
+					    (object Parameter "pdtBeginDate"
+						type       	"Date")
+					    (object Parameter "pdtEndDate"
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "SetBidAssesStatus"
+					quid       	"3C43CDEF02F8"
+					documentation 	"设置评审状态"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "pnStatus"
+						type       	"Integer"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "SetBiddingStatus"
+					quid       	"3C43CDF10014"
+					documentation 	"设置中标状态"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "pnStatus"
+						type       	"Integer"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "MakeMarketID"
+					quid       	"3C43CDF20046"
+					documentation 	"生成新的可输入的市场编号"
+					result     	"String"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "BidBook"
+				quid       	"3C43CF8401F4"
+				documentation 	"投标书"
+				operations 	(list Operations
+				    (object Operation "Register"
+					quid       	"3C43CFA600AA"
+					documentation 	"登记投标书信息"
+					parameters 	(list Parameters
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "UpdateItems"
+					quid       	"3C43CFA7017C"
+					documentation 	"更改元素项"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C43CFA90244"
+					documentation 	"删除指定投标信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C43CFAA026C"
+					documentation 	"得到招标信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "SetBidMoney"
+					quid       	"3C43CFAB029E"
+					documentation 	"设置投标价格"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "pdMoney"
+						type       	"Double"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "AssignManager"
+					quid       	"3C43CFAC0226"
+					documentation 	"设置项目经理"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "pszManagerID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "AssignJoins"
+					quid       	"3C43CFAD01E0"
+					documentation 	"指定参标人员"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "prsJoins"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ChangePosition"
+					quid       	"3C43CFAE0244"
+					documentation 	"指定参标人员岗位"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "pszWorkerID"
+						type       	"String")
+					    (object Parameter "pszPositionID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "RemoveJoins"
+					quid       	"3C43CFAF026C"
+					documentation 	"删除指定参标者"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllJoins"
+					quid       	"3C43D02E0226"
+					documentation 	"列出指定项目的所有参标人员 "
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "JoinIfConflict"
+					quid       	"3C43D022001E"
+					documentation 	"参标人员是否冲突"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "pszWorkerID"
+						type       	"String"))
+					result     	"Boolean"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "Bidding"
+				quid       	"3C43D12900E6"
+				documentation 	"投标"
+				operations 	(list Operations
+				    (object Operation "RegisterBiddingPart"
+					quid       	"3C43D1350366"
+					documentation 	"登记参标记录"
+					parameters 	(list Parameters
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "SetWinBid"
+					quid       	"3C43D13700F0"
+					documentation 	"登记中标记录"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "UpdateBiddingPart"
+					quid       	"3C43D1380154"
+					documentation 	"更改开标记录"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "pszCompanyID"
+						type       	"String")
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "RemoveBiddingPart"
+					quid       	"3C43D13901B8"
+					documentation 	"删除开标记录"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "paszCompanyID()"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllBiddingPart"
+					quid       	"3C43D13A01E0"
+					documentation 	"列出指定项目的开标记录"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetWinBidInfo"
+					quid       	"3C43D13B01D6"
+					documentation 	"得到项目中标信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "Project"
+				quid       	"3C43D28E0352"
+				documentation 	
+|承接工程项目
+|（根据工程管理的需要补充接口）
+				
+				operations 	(list Operations
+				    (object Operation "RegisterByBid"
+					quid       	"3C43D2930208"
+					documentation 	"根据招标信息登记项目"
+					parameters 	(list Parameters
+					    (object Parameter "pszMarketID"
+						type       	"String")
+					    (object Parameter "pszProjectID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "UpdateItems"
+					quid       	"3C43D29402A8"
+					documentation 	"更改元素项"
+					parameters 	(list Parameters
+					    (object Parameter "pszProjectID"
+						type       	"String")
+					    (object Parameter "prsInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C43D2950262"
+					documentation 	"删除指定投标信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszProjectID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C43D29602F8"
+					documentation 	"得到项目信息"
+					parameters 	(list Parameters
+					    (object Parameter "pszProjectID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllWorkers"
+					quid       	"3C43D2970212"
+					documentation 	"列出指定项目的所有项目人员"
+					parameters 	(list Parameters
+					    (object Parameter "pszProjectID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "SetContract"
+					quid       	"3C43D2980208"
+					documentation 	"设置项目合同"
+					parameters 	(list Parameters
+					    (object Parameter "pszProjectID"
+						type       	"String")
+					    (object Parameter "prsContractInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "SetManCharge"
+					quid       	"3C43D2990122"
+					documentation 	"设置管理费用"
+					parameters 	(list Parameters
+					    (object Parameter "pszProjectID"
+						type       	"String")
+					    (object Parameter "pdCharge"
+						type       	"Double"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "MakeProjectID"
+					quid       	"3C43D29A006E"
+					documentation 	"得到可以输入的新建项目编号"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "BidAnalyse"
+				quid       	"3C43D39602D0"
+				documentation 	
+|投标分析
+|
+|根据分析手段的不断升级，进行组件扩展
+				
+				operations 	(list Operations
+				    (object Operation "ListHistoryBids"
+					quid       	"3C43D3A100D2"
+					documentation 	"列举投标记录"
+					parameters 	(list Parameters
+					    (object Parameter "pdtBeginDate"
+						type       	"Date")
+					    (object Parameter "pdtEndDate"
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListWinBids"
+					quid       	"3C43D3A300F0"
+					documentation 	"列举本公司所有中标项目"
+					parameters 	(list Parameters
+					    (object Parameter "pdtBeginDate"
+						type       	"Date")
+					    (object Parameter "pdtEndDate"
+						type       	"Date"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "AnalyseWinRatio"
+					quid       	"3C43D3A400E6"
+					documentation 	"分析一段时间之内的中投率"
+					parameters 	(list Parameters
+					    (object Parameter "pdtBeginDate"
+						type       	"Date")
+					    (object Parameter "pdtEndDate"
+						type       	"Date"))
+					result     	"Double"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)))
+			    (object Class "ProjectPosition"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"Creatable"
+					value      	("CreatableSet" 219)))
+				quid       	"3C43D4020280"
+				documentation 	"项目岗位"
+				stereotype 	"Class Module"
+				operations 	(list Operations
+				    (object Operation "Add"
+					quid       	"3C4E1EFE019A"
+					parameters 	(list Parameters
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C4E1EFE01CC"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String")
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C4E1EFE0208"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllInfos"
+					quid       	"3C4E1EFE023A"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C4E1EFE0276"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0))
+				module     	"Component View::BasicInfo"
+				quidu      	"3C485CFE03C4"
+				language   	"Visual Basic")
+			    (object Class "BidDiscountItem"
+				quid       	"3C43D40E01FE"
+				documentation 	"投标降价优惠项"
+				stereotype 	"Class Module"
+				operations 	(list Operations
+				    (object Operation "Add"
+					quid       	"3C4E1F1603C0"
+					parameters 	(list Parameters
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C4E1F17000A"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String")
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C4E1F17000D"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllInfos"
+					quid       	"3C4E1F170046"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C4E1F170078"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0))
+				module     	"Component View::BasicInfo"
+				quidu      	"3C485CFE03C4"
+				language   	"Visual Basic")
+			    (object Class "ProjectType"
+				quid       	"3C43D5F70014"
+				documentation 	"工程类别"
+				stereotype 	"Class Module"
+				operations 	(list Operations
+				    (object Operation "Add"
+					quid       	"3C4E1F3103D4"
+					parameters 	(list Parameters
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Update"
+					quid       	"3C4E1F3103D6"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String")
+					    (object Parameter "poInfo"
+						type       	"ADODB.Recordset"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "Delete"
+					quid       	"3C4E1F320028"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "ListAllInfos"
+					quid       	"3C4E1F32005A"
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0)
+				    (object Operation "GetInfo"
+					quid       	"3C4E1F32005B"
+					parameters 	(list Parameters
+					    (object Parameter "pszID"
+						type       	"String"))
+					result     	"ADODB.Recordset"
+					concurrency 	"Sequential"
+					opExportControl 	"Public"
+					uid        	0))
+				module     	"Component View::BasicInfo"
+				quidu      	"3C485CFE03C4"
+				language   	"Visual Basic"))
+			logical_presentations 	(list unit_reference_list
+			    (object ClassDiagram "Package Overview"
+				quid       	"3C43CAF90082"
+				title      	"Package Overview"
+				zoom       	100
+				max_height 	28350
+				max_width  	21600
+				origin_x   	0
+				origin_y   	404
+				items      	(list diagram_item_list
+				    (object ClassView "Class" "Logical View::Business Services::Manager Man::MarketBid" @31
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(512, 752)
+					label      	(object ItemLabel
+					    Parent_View 	@31
+					    location   	(314, 439)
+					    nlines     	1
+					    max_width  	396
+					    justify    	0
+					    label      	"MarketBid")
+					icon_style 	"Icon"
+					quidu      	"3C43CCF50352"
+					width      	414
+					height     	648
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Manager Man::BidBook" @32
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1168, 704)
+					label      	(object ItemLabel
+					    Parent_View 	@32
+					    location   	(996, 412)
+					    nlines     	1
+					    max_width  	344
+					    justify    	0
+					    label      	"BidBook")
+					icon_style 	"Icon"
+					quidu      	"3C43CF8401F4"
+					width      	362
+					height     	606
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Manager Man::Bidding" @33
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(768, 1360)
+					label      	(object ItemLabel
+					    Parent_View 	@33
+					    location   	(562, 1179)
+					    nlines     	1
+					    max_width  	412
+					    justify    	0
+					    label      	"Bidding")
+					icon_style 	"Icon"
+					quidu      	"3C43D12900E6"
+					width      	430
+					height     	384
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Manager Man::Project" @34
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1728, 1280)
+					label      	(object ItemLabel
+					    Parent_View 	@34
+					    location   	(1563, 1055)
+					    nlines     	1
+					    max_width  	330
+					    justify    	0
+					    label      	"Project")
+					icon_style 	"Icon"
+					quidu      	"3C43D28E0352"
+					width      	348
+					height     	472
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Manager Man::BidAnalyse" @35
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1504, 1792)
+					label      	(object ItemLabel
+					    Parent_View 	@35
+					    location   	(1323, 1677)
+					    nlines     	1
+					    max_width  	362
+					    justify    	0
+					    label      	"BidAnalyse")
+					icon_style 	"Icon"
+					quidu      	"3C43D39602D0"
+					width      	380
+					height     	252
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Manager Man::ProjectPosition" @36
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(576, 2240)
+					label      	(object ItemLabel
+					    Parent_View 	@36
+					    location   	(348, 2074)
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"ProjectPosition")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@36
+					    location   	(348, 2030)
+					    anchor     	10
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"<<Class Module>>")
+					icon_style 	"Icon"
+					quidu      	"3C43D4020280"
+					width      	474
+					height     	442
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Manager Man::BidDiscountItem" @37
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1136, 2240)
+					label      	(object ItemLabel
+					    Parent_View 	@37
+					    location   	(908, 2074)
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"BidDiscountItem")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@37
+					    location   	(908, 2030)
+					    anchor     	10
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"<<Class Module>>")
+					icon_style 	"Icon"
+					quidu      	"3C43D40E01FE"
+					width      	474
+					height     	442
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Services::Manager Man::ProjectType" @38
+					ShowCompartmentStereotypes 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1824, 2224)
+					label      	(object ItemLabel
+					    Parent_View 	@38
+					    location   	(1596, 2058)
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"ProjectType")
+					stereotype 	(object ItemLabel
+					    Parent_View 	@38
+					    location   	(1596, 2014)
+					    anchor     	10
+					    nlines     	1
+					    max_width  	456
+					    justify    	0
+					    label      	"<<Class Module>>")
+					icon_style 	"Icon"
+					quidu      	"3C43D5F70014"
+					width      	474
+					height     	442
+					annotation 	8
+					autoResize 	TRUE))))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Package Overview"
+			quid       	"3C3E40530229"
+			title      	"Package Overview"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object CategoryView "Logical View::Business Services::Finance Man" @39
+				location   	(2128, 864)
+				label      	(object ItemLabel
+				    Parent_View 	@39
+				    location   	(1984, 780)
+				    nlines     	2
+				    max_width  	288
+				    justify    	0
+				    label      	"Finance Man")
+				icon_style 	"Icon"
+				quidu      	"3C43CA8C0258"
+				width      	300
+				height     	180)
+			    (object CategoryView "Logical View::Business Services::Manager Man" @40
+				location   	(336, 240)
+				label      	(object ItemLabel
+				    Parent_View 	@40
+				    location   	(192, 156)
+				    nlines     	2
+				    max_width  	288
+				    justify    	0
+				    label      	"Manager Man")
+				icon_style 	"Icon"
+				quidu      	"3C43CAF90014"
+				width      	300
+				height     	180)
+			    (object ClassView "Class" "Logical View::Business Services::IBasicCode" @41
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(272, 576)
+				label      	(object ItemLabel
+				    Parent_View 	@41
+				    location   	(47, 410)
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"IBasicCode")
+				stereotype 	(object ItemLabel
+				    Parent_View 	@41
+				    location   	(47, 366)
+				    anchor     	10
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"<<Interface>>")
+				icon       	"Interface"
+				icon_style 	"Label"
+				quidu      	"3C43CB790032"
+				width      	468
+				height     	442
+				annotation 	8
+				autoResize 	TRUE)))))
+	    (object Class_Category "Data Services"
+		attributes 	(list Attribute_Set
+		    (object Attribute
+			tool       	"VisualBasic"
+			name       	"TierPackage"
+			value      	"Data Services"))
+		quid       	"3C3E4053022A"
+		documentation 	"Data services maintain, access, and update data. They also manage and satisfy requests to manipulate data that are initiated by business services. Separating data services allows the data structure and access mechanisms to be maintained, modified, or, if necessary, even re-architected without affecting business or user services."
+		visible_categories 	(list visibility_relationship_list
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"User Services"))
+			quid       	"3C3E40530230"
+			supplier   	"Logical View::User Services"
+			quidu      	"3C3E40530226")
+		    (object Visibility_Relationship
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"VisualBasic"
+				name       	"TierPackage"
+				value      	"Data Services"))
+			quid       	"3C3E40530231"
+			supplier   	"Logical View::Business Services"
+			quidu      	"3C3E40530228"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Package Overview"
+			quid       	"3C3E4053022B"
+			title      	"Package Overview"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	158
+			items      	(list diagram_item_list))))
+	    (object Class_Category "Core Services"
+		quid       	"3C4B01FF01DD"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "CreditCard"
+			attributes 	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Creatable"
+				value      	("CreatableSet" 219)))
+			quid       	"3C4B022B019A"
+			documentation 	"用户信用证"
+			operations 	(list Operations
+			    (object Operation "Init"
+				quid       	"3C4BBAA701C1"
+				parameters 	(list Parameters
+				    (object Parameter "pszRegUser"
+					type       	"String")
+				    (object Parameter "pszRegSerial"
+					type       	"String"))
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "CreditString"
+				attributes 	(list Attribute_Set
+				    (object Attribute
+					tool       	"Visual Basic"
+					name       	"GenerateGetOperation"
+					value      	TRUE))
+				quid       	"3C4BAD06036D"
+				type       	"String"))
+			module     	"Component View::RTKerner"
+			quidu      	"3C4858A70196"
+			language   	"Visual Basic")
+		    (object Class "TransContext"
+			quid       	"3C4BC1EB0388"
+			documentation 	"事务包装器"
+			stereotype 	"Class Module"
+			operations 	(list Operations
+			    (object Operation "CreateObject"
+				quid       	"3C4BC1FF0282"
+				documentation 	"创建对象"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "BeginTrans"
+				quid       	"3C4BC1FF0296"
+				documentation 	"开始事务"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "CommitTrans"
+				quid       	"3C4BC1FF02AA"
+				documentation 	"提交事务"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0)
+			    (object Operation "RollbackTrans"
+				quid       	"3C4BC1FF02BE"
+				documentation 	"回滚事务"
+				concurrency 	"Sequential"
+				opExportControl 	"Public"
+				uid        	0))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "ObjectContext"
+				quid       	"3C4BC8F00350"
+				documentation 	"对象环境"
+				type       	"Object"))
+			module     	"Component View::ARCHCore"
+			quidu      	"3C48596B010B"
+			language   	"Visual Basic")
+		    (object Class "CFreeReg"
+			quid       	"3C4B02160059"
+			documentation 	"设置工具"
+			module     	"Component View::RTKerner"
+			quidu      	"3C4858A70196"
+			language   	"Visual Basic"))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Package Overview"
+			quid       	"3C4B01FF01F1"
+			title      	"Package Overview"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "Logical View::Core Services::CreditCard" @42
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(480, 512)
+				label      	(object ItemLabel
+				    Parent_View 	@42
+				    location   	(157, 405)
+				    nlines     	1
+				    max_width  	646
+				    justify    	0
+				    label      	"CreditCard")
+				icon_style 	"Icon"
+				quidu      	"3C4B022B019A"
+				width      	664
+				height     	236
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::Core Services::TransContext" @43
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(496, 1456)
+				label      	(object ItemLabel
+				    Parent_View 	@43
+				    location   	(159, 1290)
+				    nlines     	1
+				    max_width  	674
+				    justify    	0
+				    label      	"TransContext")
+				stereotype 	(object ItemLabel
+				    Parent_View 	@43
+				    location   	(159, 1246)
+				    anchor     	10
+				    nlines     	1
+				    max_width  	674
+				    justify    	0
+				    label      	"<<Class Module>>")
+				icon_style 	"Icon"
+				quidu      	"3C4BC1EB0388"
+				width      	692
+				height     	442
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Logical View::Core Services::CFreeReg" @44
+				ShowCompartmentStereotypes 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(528, 240)
+				label      	(object ItemLabel
+				    Parent_View 	@44
+				    location   	(409, 188)
+				    nlines     	1
+				    max_width  	238
+				    justify    	0
+				    label      	"CFreeReg")
+				icon_style 	"Icon"
+				quidu      	"3C4B02160059"
+				width      	256
+				height     	126
+				annotation 	8
+				autoResize 	TRUE))))))
+	logical_presentations 	(list unit_reference_list
+	    (object Tier_Diagram "Three-Tiered Service Model"
+		quid       	"3C3E40530232"
+		title      	"Three-Tiered Service Model"
+		documentation 	"A three-tiered architectural approach separates the various components of a client/server system into three tiers of services. The user services, business and other middle tier services, and data services are the logical tiers that collaborate in an application"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object TierView "User Services" @45
+			label      	(object ItemLabel
+			    Parent_View 	@45
+			    location   	(6, 6)
+			    nlines     	2
+			    max_width  	-12
+			    justify    	0
+			    label      	"User Services")
+			icon_style 	"Icon"
+			hidden     	TRUE
+			quidu      	"3C3E40530226"
+			width      	300
+			height     	180)
+		    (object TierView "Business Services" @46
+			location   	(600, 0)
+			label      	(object ItemLabel
+			    Parent_View 	@46
+			    location   	(606, 6)
+			    nlines     	2
+			    max_width  	-12
+			    justify    	0
+			    label      	"Business Services")
+			icon_style 	"Icon"
+			hidden     	TRUE
+			quidu      	"3C3E40530228"
+			width      	300
+			height     	180)
+		    (object TierView "Data Services" @47
+			location   	(1296, 0)
+			label      	(object ItemLabel
+			    Parent_View 	@47
+			    location   	(1302, 6)
+			    nlines     	2
+			    max_width  	-12
+			    justify    	0
+			    label      	"Data Services")
+			icon_style 	"Icon"
+			hidden     	TRUE
+			quidu      	"3C3E4053022A"
+			width      	300
+			height     	180)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::Account" @48
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 320)
+			label      	(object ItemLabel
+			    Parent_View 	@48
+			    location   	(714, 7)
+			    nlines     	1
+			    max_width  	412
+			    justify    	0
+			    label      	"Account")
+			icon_style 	"Icon"
+			quidu      	"3C3E4064038E"
+			compartment 	(object Compartment
+			    Parent_View 	@48
+			    location   	(714, 105)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	12
+			    max_width  	418)
+			width      	430
+			height     	648
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::HistoryAccount" @49
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(925, 480)
+			label      	(object ItemLabel
+			    Parent_View 	@49
+			    location   	(669, 399)
+			    nlines     	1
+			    max_width  	512
+			    justify    	0
+			    label      	"HistoryAccount")
+			icon_style 	"Icon"
+			quidu      	"3C3E416F0014"
+			width      	530
+			height     	184
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::IFinBusiness" @50
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 752)
+			label      	(object ItemLabel
+			    Parent_View 	@50
+			    location   	(745, 458)
+			    nlines     	1
+			    max_width  	350
+			    justify    	0
+			    label      	"IFinBusiness")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@50
+			    location   	(745, 414)
+			    anchor     	10
+			    nlines     	1
+			    max_width  	350
+			    justify    	0
+			    label      	"<<Interface>>")
+			icon       	"Interface"
+			icon_style 	"Label"
+			quidu      	"3C3E609E0294"
+			compartment 	(object Compartment
+			    Parent_View 	@50
+			    location   	(745, 556)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	12
+			    max_width  	356)
+			width      	368
+			height     	698
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::AccountFrame" @51
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 1296)
+			label      	(object ItemLabel
+			    Parent_View 	@51
+			    location   	(709, 1071)
+			    nlines     	1
+			    max_width  	422
+			    justify    	0
+			    label      	"AccountFrame")
+			icon_style 	"Icon"
+			quidu      	"3C3E7D6A03D4"
+			compartment 	(object Compartment
+			    Parent_View 	@51
+			    location   	(709, 1169)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	8
+			    max_width  	428)
+			width      	440
+			height     	472
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::FundIncome" @52
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 1744)
+			label      	(object ItemLabel
+			    Parent_View 	@52
+			    location   	(780, 1678)
+			    nlines     	1
+			    max_width  	280
+			    justify    	0
+			    label      	"FundIncome")
+			icon_style 	"Icon"
+			quidu      	"3C3E93C100DC"
+			width      	298
+			height     	154
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::MaterialIncome" @53
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 2016)
+			label      	(object ItemLabel
+			    Parent_View 	@53
+			    location   	(777, 1950)
+			    nlines     	1
+			    max_width  	286
+			    justify    	0
+			    label      	"MaterialIncome")
+			icon_style 	"Icon"
+			quidu      	"3C3E94D8015E"
+			width      	304
+			height     	154
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::MaterialOut" @54
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 2368)
+			label      	(object ItemLabel
+			    Parent_View 	@54
+			    location   	(780, 2302)
+			    nlines     	1
+			    max_width  	280
+			    justify    	0
+			    label      	"MaterialOut")
+			icon_style 	"Icon"
+			quidu      	"3C3E94E1019A"
+			width      	298
+			height     	154
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::DeptIncome" @55
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 2640)
+			label      	(object ItemLabel
+			    Parent_View 	@55
+			    location   	(780, 2574)
+			    nlines     	1
+			    max_width  	280
+			    justify    	0
+			    label      	"DeptIncome")
+			icon_style 	"Icon"
+			quidu      	"3C3E953C032A"
+			width      	298
+			height     	154
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @56
+			stereotype 	TRUE
+			quidu      	"3C3E959B0230"
+			client     	@52
+			supplier   	@50
+			line_style 	0)
+		    (object InheritView "" @57
+			stereotype 	TRUE
+			quidu      	"3C3E95A403B6"
+			client     	@53
+			supplier   	@50
+			line_style 	0)
+		    (object InheritView "" @58
+			stereotype 	TRUE
+			quidu      	"3C3E95A7038E"
+			client     	@54
+			supplier   	@50
+			line_style 	0)
+		    (object InheritView "" @59
+			stereotype 	TRUE
+			quidu      	"3C3E95AA0118"
+			client     	@55
+			supplier   	@50
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::BailOut" @60
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 2912)
+			label      	(object ItemLabel
+			    Parent_View 	@60
+			    location   	(780, 2846)
+			    nlines     	1
+			    max_width  	280
+			    justify    	0
+			    label      	"BailOut")
+			icon_style 	"Icon"
+			quidu      	"3C3E95D40348"
+			width      	298
+			height     	154
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @61
+			stereotype 	TRUE
+			quidu      	"3C3E95E1032A"
+			client     	@60
+			supplier   	@50
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::ProjectCost" @62
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 3184)
+			label      	(object ItemLabel
+			    Parent_View 	@62
+			    location   	(750, 3069)
+			    nlines     	1
+			    max_width  	340
+			    justify    	0
+			    label      	"ProjectCost")
+			icon_style 	"Icon"
+			quidu      	"3C3E962E0096"
+			compartment 	(object Compartment
+			    Parent_View 	@62
+			    location   	(750, 3167)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	3
+			    max_width  	346)
+			width      	358
+			height     	252
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @63
+			stereotype 	TRUE
+			quidu      	"3C3E964800BE"
+			client     	@62
+			supplier   	@50
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::DeptOut" @64
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 3536)
+			label      	(object ItemLabel
+			    Parent_View 	@64
+			    location   	(719, 3421)
+			    nlines     	1
+			    max_width  	402
+			    justify    	0
+			    label      	"DeptOut")
+			icon_style 	"Icon"
+			quidu      	"3C3E98A50276"
+			compartment 	(object Compartment
+			    Parent_View 	@64
+			    location   	(719, 3519)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	3
+			    max_width  	409)
+			width      	420
+			height     	252
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @65
+			stereotype 	TRUE
+			quidu      	"3C3E98BD0244"
+			client     	@64
+			supplier   	@50
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::FeeTransfer" @66
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 3808)
+			label      	(object ItemLabel
+			    Parent_View 	@66
+			    location   	(780, 3742)
+			    nlines     	1
+			    max_width  	280
+			    justify    	0
+			    label      	"FeeTransfer")
+			icon_style 	"Icon"
+			quidu      	"3C3E990403A2"
+			width      	298
+			height     	154
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @67
+			stereotype 	TRUE
+			quidu      	"3C3E991D0096"
+			client     	@66
+			supplier   	@50
+			line_style 	0)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::ProductFare" @68
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 4080)
+			label      	(object ItemLabel
+			    Parent_View 	@68
+			    location   	(772, 3899)
+			    nlines     	1
+			    max_width  	296
+			    justify    	0
+			    label      	"ProductFare")
+			icon_style 	"Icon"
+			quidu      	"3C3EA3AD012C"
+			compartment 	(object Compartment
+			    Parent_View 	@68
+			    location   	(772, 3997)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	6
+			    max_width  	303)
+			width      	314
+			height     	384
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::AccountRpt" @69
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(920, 4352)
+			label      	(object ItemLabel
+			    Parent_View 	@69
+			    location   	(738, 4193)
+			    nlines     	1
+			    max_width  	364
+			    justify    	0
+			    label      	"AccountRpt")
+			icon_style 	"Icon"
+			quidu      	"3C3EA3BF032A"
+			compartment 	(object Compartment
+			    Parent_View 	@69
+			    location   	(738, 4291)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	5
+			    max_width  	371)
+			width      	382
+			height     	340
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::Bank" @70
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(925, 4704)
+			label      	(object ItemLabel
+			    Parent_View 	@70
+			    location   	(669, 4510)
+			    nlines     	1
+			    max_width  	512
+			    justify    	0
+			    label      	"Bank")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@70
+			    location   	(669, 4466)
+			    anchor     	10
+			    nlines     	1
+			    max_width  	512
+			    justify    	0
+			    label      	"<<Class Module>>")
+			icon_style 	"Icon"
+			quidu      	"3C424F4F0294"
+			compartment 	(object Compartment
+			    Parent_View 	@70
+			    location   	(669, 4608)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	6
+			    max_width  	268)
+			width      	530
+			height     	498
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::ManChargeItem" @71
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(925, 4976)
+			label      	(object ItemLabel
+			    Parent_View 	@71
+			    location   	(669, 4782)
+			    nlines     	1
+			    max_width  	512
+			    justify    	0
+			    label      	"ManChargeItem")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@71
+			    location   	(669, 4738)
+			    anchor     	10
+			    nlines     	1
+			    max_width  	512
+			    justify    	0
+			    label      	"<<Class Module>>")
+			icon_style 	"Icon"
+			quidu      	"3C424FC300E6"
+			compartment 	(object Compartment
+			    Parent_View 	@71
+			    location   	(669, 4880)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	6
+			    max_width  	268)
+			width      	530
+			height     	498
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::Finance Man::ProjectProcess" @72
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(925, 5248)
+			label      	(object ItemLabel
+			    Parent_View 	@72
+			    location   	(669, 5054)
+			    nlines     	1
+			    max_width  	512
+			    justify    	0
+			    label      	"ProjectProcess")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@72
+			    location   	(669, 5010)
+			    anchor     	10
+			    nlines     	1
+			    max_width  	512
+			    justify    	0
+			    label      	"<<Class Module>>")
+			icon_style 	"Icon"
+			quidu      	"3C424FF90302"
+			compartment 	(object Compartment
+			    Parent_View 	@72
+			    location   	(669, 5152)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	6
+			    max_width  	268)
+			width      	530
+			height     	498
+			annotation 	8
+			autoResize 	TRUE)
+		    (object CategoryView "Logical View::Business Services::Finance Man" @73
+			location   	(888, 6000)
+			label      	(object ItemLabel
+			    Parent_View 	@73
+			    location   	(744, 5916)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Finance Man")
+			icon_style 	"Icon"
+			quidu      	"3C43CA8C0258"
+			width      	300
+			height     	180)
+		    (object CategoryView "Logical View::Business Services::Manager Man" @74
+			location   	(888, 6448)
+			label      	(object ItemLabel
+			    Parent_View 	@74
+			    location   	(744, 6364)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Manager Man")
+			icon_style 	"Icon"
+			quidu      	"3C43CAF90014"
+			width      	300
+			height     	180)
+		    (object ClassView "Class" "Logical View::Business Services::IBasicCode" @75
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(904, 6784)
+			label      	(object ItemLabel
+			    Parent_View 	@75
+			    location   	(679, 6618)
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"IBasicCode")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@75
+			    location   	(679, 6574)
+			    anchor     	10
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<Interface>>")
+			icon       	"Interface"
+			icon_style 	"Label"
+			quidu      	"3C43CB790032"
+			compartment 	(object Compartment
+			    Parent_View 	@75
+			    location   	(679, 6672)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	6
+			    max_width  	268)
+			width      	468
+			height     	442
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::IBasicCode" @76
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1002, 7136)
+			label      	(object ItemLabel
+			    Parent_View 	@76
+			    location   	(777, 6970)
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"IBasicCode")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@76
+			    location   	(777, 6926)
+			    anchor     	10
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<Interface>>")
+			icon       	"Interface"
+			icon_style 	"Label"
+			quidu      	"3C43CB790032"
+			compartment 	(object Compartment
+			    Parent_View 	@76
+			    location   	(777, 7024)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	6
+			    max_width  	268)
+			width      	468
+			height     	442
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Business Services::IBasicCode" @77
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1002, 7584)
+			label      	(object ItemLabel
+			    Parent_View 	@77
+			    location   	(777, 7418)
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"IBasicCode")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@77
+			    location   	(777, 7374)
+			    anchor     	10
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<Interface>>")
+			icon       	"Interface"
+			icon_style 	"Label"
+			quidu      	"3C43CB790032"
+			compartment 	(object Compartment
+			    Parent_View 	@77
+			    location   	(777, 7472)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	6
+			    max_width  	268)
+			width      	468
+			height     	442
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::User Services::Class1" @78
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(272, 480)
+			label      	(object ItemLabel
+			    Parent_View 	@78
+			    location   	(21, 120)
+			    nlines     	1
+			    max_width  	502
+			    justify    	0
+			    label      	"Class1")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@78
+			    location   	(21, 76)
+			    anchor     	10
+			    nlines     	1
+			    max_width  	502
+			    justify    	0
+			    label      	"<<Class Module>>")
+			icon_style 	"Icon"
+			quidu      	"3C43D671033E"
+			compartment 	(object Compartment
+			    Parent_View 	@78
+			    location   	(21, 174)
+			    icon_style 	"Icon"
+			    anchor     	2
+			    nlines     	16
+			    max_width  	500)
+			width      	520
+			height     	830
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::User Services::Shell" @79
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(269, 752)
+			label      	(object ItemLabel
+			    Parent_View 	@79
+			    location   	(188, 707)
+			    nlines     	1
+			    max_width  	162
+			    justify    	0
+			    label      	"Shell")
+			icon_style 	"Icon"
+			quidu      	"3C43D6790050"
+			height     	112
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::User Services::ActiveEnv" @80
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(269, 128)
+			label      	(object ItemLabel
+			    Parent_View 	@80
+			    location   	(168, 83)
+			    nlines     	1
+			    max_width  	202
+			    justify    	0
+			    label      	"ActiveEnv")
+			icon_style 	"Icon"
+			quidu      	"3C50F6000293"
+			width      	220
+			height     	112
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::User Services::FlagLibTemplate" @81
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(269, 1024)
+			label      	(object ItemLabel
+			    Parent_View 	@81
+			    location   	(116, 979)
+			    nlines     	1
+			    max_width  	306
+			    justify    	0
+			    label      	"FlagLibTemplate")
+			icon_style 	"Icon"
+			quidu      	"3C50F624026D"
+			width      	324
+			height     	112
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::User Services::Postil" @82
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(269, 1296)
+			label      	(object ItemLabel
+			    Parent_View 	@82
+			    location   	(188, 1251)
+			    nlines     	1
+			    max_width  	162
+			    justify    	0
+			    label      	"Postil")
+			icon_style 	"Icon"
+			quidu      	"3C50F6BC01CB"
+			height     	112
+			annotation 	8
+			autoResize 	TRUE)))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"3C3E4050039B"
+	physical_models 	(list unit_reference_list
+	    (object module "RTKerner" "NotAModuleType" "NotAModulePart"
+		quid       	"3C4858A70196"
+		documentation 	
+|底层核心部件包
+|（包含注册表访问对象、加密解密算法）
+		
+		stereotype 	""
+		language   	"Visual Basic")
+	    (object module "ARCHCore" "NotAModuleType" "NotAModulePart"
+		quid       	"3C48596B010B"
+		documentation 	
+|建筑软件核心部件包
+|所有与建筑平台相关的底层服务
+|包括建筑数据库连接、
+		
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"3C485A7C03A3"
+			supplier   	"Component View::RTKerner"
+			quidu      	"3C4858A70196"
+			supplier_is_spec 	TRUE)
+		    (object Dependency_Relationship
+			quid       	"3C485A8303DF"
+			supplier   	"Component View::ADODB"
+			quidu      	"3C4859B302D2"
+			supplier_is_spec 	TRUE))
+		language   	"Visual Basic")
+	    (object module "ADODB" "NotAModuleType" "NotAModulePart"
+		quid       	"3C4859B302D2"
+		stereotype 	"")
+	    (object module "FinanceApp" "NotAModuleType" "NotAModulePart"
+		quid       	"3C485AAF01B2"
+		documentation 	"财务部件包"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"3C485DC6012D"
+			supplier   	"Component View::ARCHCore"
+			quidu      	"3C48596B010B"
+			supplier_is_spec 	TRUE)
+		    (object Dependency_Relationship
+			quid       	"3C485DFC030B"
+			supplier   	"Component View::ADODB"
+			quidu      	"3C4859B302D2"
+			supplier_is_spec 	TRUE)))
+	    (object module "FareApp" "NotAModuleType" "NotAModulePart"
+		quid       	"3C485BFF025F"
+		documentation 	"经营部件包"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"3C485DCC0320"
+			supplier   	"Component View::ARCHCore"
+			quidu      	"3C48596B010B"
+			supplier_is_spec 	TRUE)
+		    (object Dependency_Relationship
+			quid       	"3C485E020364"
+			supplier   	"Component View::ADODB"
+			quidu      	"3C4859B302D2"
+			supplier_is_spec 	TRUE)))
+	    (object module "BasicInfo" "NotAModuleType" "NotAModulePart"
+		quid       	"3C485CFE03C4"
+		documentation 	"建筑基本信息部件包"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"3C485DC001EC"
+			supplier   	"Component View::ARCHCore"
+			quidu      	"3C48596B010B"
+			supplier_is_spec 	TRUE)
+		    (object Dependency_Relationship
+			quid       	"3C485DF503C9"
+			supplier   	"Component View::ADODB"
+			quidu      	"3C4859B302D2"
+			supplier_is_spec 	TRUE))
+		language   	"Visual Basic")
+	    (object module "ARCHManBasic" "NotAModuleType" "NotAModulePart"
+		quid       	"3C485E560383"
+		documentation 	"建筑经营管理基本部件包"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"3C485EAE0235"
+			supplier   	"Component View::ARCHCore"
+			quidu      	"3C48596B010B"
+			supplier_is_spec 	TRUE)
+		    (object Dependency_Relationship
+			quid       	"3C485EB402F2"
+			supplier   	"Component View::ADODB"
+			quidu      	"3C4859B302D2"
+			supplier_is_spec 	TRUE)))
+	    (object module "RTWordTools" "NotAModuleType" "NotAModulePart"
+		quid       	"3C485ED001F8"
+		documentation 	"WORD控制工具集"
+		stereotype 	"")
+	    (object module "RTReport" "NotAModuleType" "NotAModulePart"
+		quid       	"3C485F5C01E5"
+		documentation 	"报表工具集"
+		stereotype 	"ActiveX"
+		language   	"Visual Basic")
+	    (object module "ProjectApp" "NotAModuleType" "NotAModulePart"
+		quid       	"3C48650A0344"
+		documentation 	"工程管理"
+		stereotype 	"")
+	    (object module "RTShell" "NotAModuleType" "NotAModulePart"
+		quid       	"3C50F128024A"
+		stereotype 	""))
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"3C3E405301F4"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ModView "Component View::RTKerner" "NotAModuleType" "NotAModulePart" @83
+			location   	(464, 1536)
+			label      	(object ItemLabel
+			    Parent_View 	@83
+			    location   	(429, 1511)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"RTKerner")
+			icon_style 	"Icon"
+			quidu      	"3C4858A70196"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)
+		    (object ModView "Component View::ARCHCore" "NotAModuleType" "NotAModulePart" @84
+			location   	(464, 1152)
+			label      	(object ItemLabel
+			    Parent_View 	@84
+			    location   	(429, 1127)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"ARCHCore")
+			icon_style 	"Icon"
+			quidu      	"3C48596B010B"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)
+		    (object ModView "Component View::ADODB" "NotAModuleType" "NotAModulePart" @85
+			location   	(832, 1552)
+			label      	(object ItemLabel
+			    Parent_View 	@85
+			    location   	(797, 1527)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"ADODB")
+			icon_style 	"Icon"
+			quidu      	"3C4859B302D2"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)
+		    (object ModVisView "" @86
+			stereotype 	TRUE
+			quidu      	"3C485A7C03A3"
+			client     	@84
+			supplier   	@83
+			line_style 	0)
+		    (object ModVisView "" @87
+			stereotype 	TRUE
+			quidu      	"3C485A8303DF"
+			client     	@84
+			supplier   	@85
+			line_style 	0)
+		    (object ModView "Component View::FinanceApp" "NotAModuleType" "NotAModulePart" @88
+			location   	(1040, 768)
+			label      	(object ItemLabel
+			    Parent_View 	@88
+			    location   	(1005, 743)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"FinanceApp")
+			icon_style 	"Icon"
+			quidu      	"3C485AAF01B2"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)
+		    (object ModView "Component View::FareApp" "NotAModuleType" "NotAModulePart" @89
+			location   	(1536, 752)
+			label      	(object ItemLabel
+			    Parent_View 	@89
+			    location   	(1501, 727)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"FareApp")
+			icon_style 	"Icon"
+			quidu      	"3C485BFF025F"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)
+		    (object ModView "Component View::BasicInfo" "NotAModuleType" "NotAModulePart" @90
+			location   	(512, 784)
+			label      	(object ItemLabel
+			    Parent_View 	@90
+			    location   	(477, 759)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"BasicInfo")
+			icon_style 	"Icon"
+			quidu      	"3C485CFE03C4"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)
+		    (object ModVisView "" @91
+			stereotype 	TRUE
+			quidu      	"3C485DC001EC"
+			client     	@90
+			supplier   	@84
+			line_style 	0)
+		    (object ModVisView "" @92
+			stereotype 	TRUE
+			quidu      	"3C485DC6012D"
+			client     	@88
+			supplier   	@84
+			line_style 	0)
+		    (object ModVisView "" @93
+			stereotype 	TRUE
+			quidu      	"3C485DCC0320"
+			client     	@89
+			supplier   	@84
+			line_style 	0)
+		    (object ModVisView "" @94
+			stereotype 	TRUE
+			quidu      	"3C485DF503C9"
+			client     	@90
+			supplier   	@85
+			line_style 	0)
+		    (object ModVisView "" @95
+			stereotype 	TRUE
+			quidu      	"3C485DFC030B"
+			client     	@88
+			supplier   	@85
+			line_style 	0)
+		    (object ModVisView "" @96
+			stereotype 	TRUE
+			quidu      	"3C485E020364"
+			client     	@89
+			supplier   	@85
+			line_style 	0)
+		    (object ModView "Component View::RTWordTools" "NotAModuleType" "NotAModulePart" @97
+			location   	(400, 192)
+			label      	(object ItemLabel
+			    Parent_View 	@97
+			    location   	(365, 167)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"RTWordTools")
+			icon_style 	"Icon"
+			quidu      	"3C485ED001F8"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)
+		    (object ModView "Component View::RTReport" "NotAModuleType" "NotAModulePart" @98
+			location   	(704, 512)
+			label      	(object ItemLabel
+			    Parent_View 	@98
+			    location   	(639, 531)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	244
+			    label      	"RTReport")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@98
+			    location   	(639, 465)
+			    anchor     	10
+			    anchor_loc 	3
+			    nlines     	1
+			    max_width  	241
+			    label      	"<<ActiveX>>")
+			icon_style 	"Icon"
+			quidu      	"3C485F5C01E5"
+			width      	440
+			autoResize 	TRUE
+			width      	440
+			height     	162)
+		    (object ModView "Component View::ProjectApp" "NotAModuleType" "NotAModulePart" @99
+			location   	(1872, 752)
+			label      	(object ItemLabel
+			    Parent_View 	@99
+			    location   	(1837, 727)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"ProjectApp")
+			icon_style 	"Icon"
+			quidu      	"3C48650A0344"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)
+		    (object ModView "Component View::RTShell" "NotAModuleType" "NotAModulePart" @100
+			location   	(1056, 192)
+			label      	(object ItemLabel
+			    Parent_View 	@100
+			    location   	(1021, 167)
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	127
+			    label      	"RTShell")
+			icon_style 	"Icon"
+			quidu      	"3C50F128024A"
+			width      	228
+			autoResize 	TRUE
+			width      	228
+			height     	162)))))
+    process_structure 	(object Processes
+	quid       	"3C3E4050039C"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"3C3E4050039E"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"Repository"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"SourceSafe"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"TypeLibImporter"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"VC++"
+		name       	"propertyId"
+		value      	"809135966")
+	    (object Attribute
+		tool       	"VC++"
+		name       	"default__Class"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"VC++"
+			name       	"Generate"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"VC++"
+			name       	"HeaderFile"
+			value      	"AUTO GENERATE")))
+	    (object Attribute
+		tool       	"VC++"
+		name       	"default__Operation"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"VC++"
+			name       	"OperationIsConst"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"VC++"
+			name       	"OperationKindSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"VC++"
+				name       	"Non-virtual"
+				value      	200)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"Abstract"
+				value      	201)
+			    (object Attribute
+				tool       	"VC++"
+				name       	"Virtual"
+				value      	202)))
+		    (object Attribute
+			tool       	"VC++"
+			name       	"OperationKind"
+			value      	("OperationKindSet" 200))))
+	    (object Attribute
+		tool       	"VC++"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"VJ++"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"propertyId"
+		value      	"783606378")
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Class"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"CreatableSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Private"
+				value      	221)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"PublicNotCreatable"
+				value      	213)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"SingleUse"
+				value      	214)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"GlobalSingleUse"
+				value      	215)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"MultiUse"
+				value      	219)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"GlobalMultiUse"
+				value      	220)))
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"OptionBase"
+			value      	"0")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"OptionExplicit"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"OptionCompare"
+			value      	("CompareSet" 202))
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"Creatable"
+			value      	("CreatableSet" 221))
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateInitialization"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateTermination"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"CollectionClass"
+			value      	"Collection")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"CompareSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"None"
+				value      	202)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Binary"
+				value      	203)
+			    (object Attribute
+				tool       	"Visual Basic"
+				name       	"Text"
+				value      	204)))))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Operation"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"OperationName"
+			value      	"$operation")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"LibraryName"
+			value      	"")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"AliasName"
+			value      	"")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"IsStatic"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"EntryCode"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"ExitCode"
+			value      	(value Text ""))))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Attribute"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"IsConst"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"New"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"WithEvents"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"Subscript"
+			value      	"")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"NameIfUnlabeled"
+			value      	"the$supplier")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"DataMemberName"
+			value      	"$relationship")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateGetOperation"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateSetOperation"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateLetOperation"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Role"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"New"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"WithEvents"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"Subscript"
+			value      	"")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"NameIfUnlabeled"
+			value      	"the$supplier")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"DataMemberName"
+			value      	"$relationship")
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateGetOperation"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateSetOperation"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"GenerateLetOperation"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Inherit"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"ImplementsDelegation"
+			value      	TRUE)))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"default__Module-Spec"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Visual Basic"
+			name       	"ProjectFile"
+			value      	"")))
+	    (object Attribute
+		tool       	"Visual Basic"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"VisualStudio"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"3C3E4050039D"))

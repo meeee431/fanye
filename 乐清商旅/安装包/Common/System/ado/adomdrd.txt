@@ -1,0 +1,32 @@
+-------------------------------------------------------------------
+Microsoft ActiveX Data Objects (Multidimensional) (ADO MD) 自述文件
+-------------------------------------------------------------------
+
+(c) 1998 Microsoft Corporation. All rights reserved.
+
+本文档是 Microsoft ADO MD 文档的增补部分，提供一些最新的或其他方面的信息。
+
+----
+目录
+----
+
+1. 产品说明
+
+2. 技术说明
+
+3. 已知错误、限制和解决方法
+
+-----------
+1. 产品说明
+-----------
+Microsoft ActiveX Data Objects (Multidimensional) (ADO MD) 用于通过多种语言实现对多维数据的简便访问，这些语言包括诸如 Microsoft Visual Basic、Microsoft Visual C++ 和 Microsoft Visual J++。ADO MD 扩展了 Microsoft ActiveX Data Objects (ADO)，使之可包括特定于多维数据的对象，如 CubeDef 和 Cellset 对象。通过 ADO MD，将能够浏览多维模式、查询立方和检索结果。 
+
+-----------
+2. 技术说明
+-----------
+目前无技术说明。
+
+---------------------------
+3. 已知错误、限制和解决方法
+---------------------------
+目前无已知错误。

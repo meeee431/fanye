@@ -1,0 +1,17 @@
+mdlHtmlHelpCom = 0, 0, 0, 0, C
+mdCommonLib = 0, 0, 0, 0, C
+mdAdvanceLib = 0, 0, 0, 0, C
+mdStation = 0, 0, 0, 0, C
+mdFunsVisual = 0, 0, 0, 0, C
+Connected = 0, 0, 0, 0, C
+frmChgStartTktNumber = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmPriceInfo = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmNotify = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmQuerySellTk = 244, 129, 678, 679, C, 0, 0, 0, 0, C
+frmOrderSeats = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmCancelTicket = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+mdlDisplay = 0, 0, 0, 0, C
+MDISellTicket = 244, 129, 678, 679, CZ, 0, 0, 0, 0, C
+Print = 244, 129, 678, 679, C
+frmSell = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+mdlMain = 244, 129, 678, 679, C

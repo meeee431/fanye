@@ -1,0 +1,13 @@
+mdMiddleLib = 0, 0, 0, 0, C
+mdErrorLib = 0, 0, 0, 0, C
+mdCommonLib = 0, 0, 0, 0, C
+mdAdvanceLib = 0, 0, 0, 0, C
+mdSystemBase = 0, 0, 0, 0, C
+mdMsgUp = 0, 0, 0, 0, C
+ActiveUser = 50, 50, 960, 453, Z
+ActiveUserData = 0, 0, 0, 0, C
+SystemAgent = 0, 0, 0, 0, C
+TicketType = 0, 0, 0, 0, C
+mdStation = 0, 0, 0, 0, C
+mdSystem = 0, 0, 0, 0, C
+SystemParam = 22, 29, 635, 420, 

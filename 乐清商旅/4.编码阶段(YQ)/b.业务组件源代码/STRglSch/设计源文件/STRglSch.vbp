@@ -1,0 +1,64 @@
+Type=OleDll
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
+Reference=*\G{00000200-0000-0010-8000-00AA006D2EA4}#2.0#0#..\..\..\..\..\..\..\Program Files\Common Files\system\ado\msado20.tlb#Microsoft ActiveX Data Objects 2.0 Library
+Reference=*\G{EE887419-0123-40D6-9B39-ED1839847C02}#1.0#0#..\..\..\..\..\..\..\WINDOWS\system32\RTBaseLib.dll#RTsoft Application Base Service
+Reference=*\G{D82A763C-E967-464E-85A0-8079CC08F881}#1.0#0#..\..\..\..\..\..\..\WINDOWS\system32\RTCore.dll#RTsoft Core Service
+Reference=*\G{3A464B8B-5659-42F7-AB63-EACA2C544FFA}#7.c#0#..\..\..\..\..\..\..\WINDOWS\system32\STSystemBase.dll#RTStation System Module
+Module=mdCommonLib; mdCommonLib.bas
+Module=mdMiddleLib; mdMiddleLib.bas
+Module=mdErrorLib; mdErrorHandling.bas
+Module=mdStation; mdStation.bas
+Module=mdSNRunPrj; mdSNRunPrj.bas
+Module=mdSystem; mdSystem.bas
+Class=Bus; Bus.cls
+Class=RegularScheme; RegularScheme.cls
+Class=BusProject; BusProject.cls
+ResFile32="STRglSch.RES"
+Startup="(None)"
+HelpFile=""
+ExeName32="STRglSch.dll"
+Path32="..\Ä¿±ê´úÂë"
+Command32=""
+Name="STRglSch"
+HelpContextID="0"
+CompatibleMode="2"
+CompatibleEXE32="..\..\..\..\..\..\..\WINDOWS\system32\STRglSch.dll"
+VersionCompatible32="1"
+MajorVer=0
+MinorVer=0
+RevisionVer=8
+AutoIncrementVer=1
+ServerSupportFiles=0
+CondComp="IN_DEBUG = 0"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=1
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+ThreadingModel=1
+DebugStartupOption=0
+
+[RVB]
+DeleteClass1=mdBase
+DeleteClass2=Area
+DeleteClass3=Area
+DeleteClass4=Owner
+DeleteClass5=Area
+DeleteClass6=Area
+DeleteClass7=Area
+DeleteClass8=Area
+DeleteClass9=Area
+DeleteClass10=Form1
+
+[MS Transaction Server]
+AutoRefresh=1

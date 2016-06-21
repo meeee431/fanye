@@ -1,0 +1,3 @@
+行 44: 控件 lblSeat 的类 RTComctl3.FlatLabel 不是一个已加载的控件类。
+行 65: 控件 cmdCancel 的类 RTComctl3.CoolButton 不是一个已加载的控件类。
+行 103: 控件 cmdOk 的类 RTComctl3.CoolButton 不是一个已加载的控件类。

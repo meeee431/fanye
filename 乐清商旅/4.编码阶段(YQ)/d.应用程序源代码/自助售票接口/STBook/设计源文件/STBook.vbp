@@ -1,0 +1,61 @@
+Type=OleDll
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\WINDOWS\system32\stdole2.tlb#OLE Automation
+Reference=*\G{00000200-0000-0010-8000-00AA006D2EA4}#2.0#0#..\..\..\..\..\Program Files\Common Files\system\ado\msado20.tlb#Microsoft ActiveX Data Objects 2.0 Library
+Reference=*\G{EE887419-0123-40D6-9B39-ED1839847C02}#1.0#0#..\..\..\..\..\WINDOWS\system32\RTBaseLib.dll#RTsoft Application Base Service
+Reference=*\G{D82A763C-E967-464E-85A0-8079CC08F881}#1.1#0#..\..\..\..\..\WINDOWS\system32\RTCore.dll#RTsoft Core Service
+Reference=*\G{3A464B8B-5659-42F7-AB63-EACA2C544FFA}#7.2#0#..\..\..\..\..\WINDOWS\system32\STSystemBase.dll#RTStation System Module
+Module=mdCommonLib; mdCommonLib.bas
+Module=mdErrorLib; mdErrorHandling.bas
+Module=mdMiddleLib; mdMiddleLib.bas
+Module=mdStation; mdStation.bas
+Module=mdSystem; mdSystem.bas
+Class=CBook; CBook.cls
+ResFile32="STBook.RES"
+Startup="(None)"
+HelpFile=""
+Title="STBook"
+ExeName32="STBook.dll"
+Path32="..\..\..\..\..\..\winnt\SYSTEM32"
+Command32=""
+Name="STBook"
+HelpContextID="0"
+Description="RTStation Book Service"
+CompatibleMode="2"
+CompatibleEXE32="..\..\..\..\..\windows\SYSTEM32\STBook.dll"
+VersionCompatible32="1"
+MajorVer=1
+MinorVer=0
+RevisionVer=5
+AutoIncrementVer=1
+ServerSupportFiles=0
+VersionComments="RTStation Book Service预定系统"
+VersionCompanyName="瑞通软件"
+VersionFileDescription="RTStation Book Service预定系统"
+VersionLegalCopyright="RTSoft"
+VersionLegalTrademarks="RTStation"
+VersionProductName="RTStation Book Service预定系统"
+CondComp="IN_DEBUG = 0"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=1
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+ThreadingModel=1
+DebugStartupOption=0
+
+[MS Transaction Server]
+AutoRefresh=1
+
+[RVB]
+DeleteClass1=mdCommonAll
+DeleteClass2=mdCommonMid

@@ -1,0 +1,11 @@
+mdErrorLib = 103, 162, 739, 559, C
+mdCommonLib = 133, 83, 783, 480, C
+mdMiddleLib = 88, 88, 687, 532, C
+mdLuggage = 72, 181, 758, 578, C
+mdSettle = 110, 145, 895, 607, C
+mdSystem = 110, 110, 736, 554, C
+LuggageKinds = 0, 0, 0, 0, C
+LuggageParam = 39, 20, 705, 491, C
+AcceptSheet = 78, 55, 735, 586, C
+CarrySheet = 35, 90, 785, 709, C
+LuggageSvr = 7, 3, 802, 643, Z
